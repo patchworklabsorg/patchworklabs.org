@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "Patchwork Labs",
-    template: "%s — Patchwork Labs",
+    template: "%s | Patchwork Labs",
   },
   description:
     "A community of makers from around the world, building everything from rocket engines to scam detection tools. Grants, compute, and a community for anyone 13 and up.",

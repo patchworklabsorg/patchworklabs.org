@@ -56,13 +56,13 @@ export default function Home() {
         <h2 className="font-display text-3xl font-bold">Our mission</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Our goal is to make making accessible and break down the barriers
-          that keep you from finishing your next project — be that grants for
-          hardware, access to compute, or an amazing community of people.
-          We&rsquo;ve got you :)
+          that keep you from finishing your next project. Be that grants for
+          hardware, access to compute, or an amazing community of people,
+          we&rsquo;ve got you :)
         </p>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Patchwork Labs was founded in 2025 by Jasper Mayone, and the founding
-          idea — access without gatekeeping — is still the whole point.
+          idea of access without gatekeeping is still the whole point.
         </p>
       </section>
 
@@ -77,7 +77,7 @@ export default function Home() {
             Project Ganymede
           </h3>
           <p className="mt-3 max-w-2xl text-ink-soft">
-            A program giving makers access to compute — unblocking projects
+            A program giving makers access to compute, unblocking projects
             that would have otherwise been infeasible.
           </p>
           <Link
@@ -89,7 +89,7 @@ export default function Home() {
         </div>
         <p className="mt-6 max-w-2xl text-ink-soft">
           Beyond Ganymede, individual Patchwork Labs members are pursuing their
-          own independent projects across robotics, security, and beyond — with
+          own independent projects across robotics, security, and beyond, with
           more community-driven initiatives on the way.
         </p>
       </section>
@@ -98,8 +98,8 @@ export default function Home() {
       <section className="py-12 pb-20">
         <h2 className="font-display text-3xl font-bold">Community</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          We&rsquo;re a growing group of makers — currently 56 members strong on
-          Slack — trading ideas, troubleshooting, and pushing each other&rsquo;s
+          We&rsquo;re a growing group of makers, currently 56 members strong on
+          Slack, trading ideas, troubleshooting, and pushing each other&rsquo;s
           projects forward. If you&rsquo;re building something, this is a good
           place to not build it alone.
         </p>
@@ -117,7 +117,7 @@ export default function Home() {
           >
             {SLACK_EMAIL}
           </a>{" "}
-          for an invite — a smoother flow is coming soon.
+          for an invite. A smoother flow is coming soon.
         </p>
       </section>
 

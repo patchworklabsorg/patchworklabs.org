@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Team",
   description:
-    "The people behind Patchwork Labs — makers, organizers, and volunteers building a home for the next generation of makers.",
+    "The people behind Patchwork Labs: makers, organizers, and volunteers building a home for the next generation of makers.",
 };
 
 type TeamMember = {
@@ -51,7 +51,7 @@ const team: TeamMember[] = [
     patchColor: "bg-orchid-soft",
     photo: "/team/adam-headshot.jpg",
     bio: [
-      "Adam is an avid scout, backpacking for 21 days at Philmont and attending National Jamboree this summer. He’s also an avid sailor — on the water since he was 6, and founder of his school’s sailing team.",
+      "Adam is an avid scout, backpacking for 21 days at Philmont and attending National Jamboree this summer. He’s also an avid sailor, on the water since he was 6 and founder of his school’s sailing team.",
       "When he’s not scouting, sailing, or at school, he’s working on personal projects: developing his combat robot, building a SaaS app, and running Project Ganymede. He’s heading into his junior year at Fairfield Warde High School.",
     ],
   },
@@ -80,8 +80,8 @@ export default function Team() {
           The team
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-ink-soft">
-          Patchwork Labs is run by makers, for makers — a small volunteer team
-          stitching the whole thing together.
+          Patchwork Labs is run by makers, for makers. A small volunteer team
+          stitches the whole thing together.
         </p>
       </section>
 

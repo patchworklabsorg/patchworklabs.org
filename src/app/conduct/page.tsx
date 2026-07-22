@@ -20,7 +20,7 @@ const expectations = [
   },
   {
     title: "Keep it appropriate",
-    body: "Many members are minors. Keep content and conversation appropriate for a community that includes 13-year-olds — if you'd hesitate to say it in front of someone's parents, don't post it.",
+    body: "Many members are minors. Keep content and conversation appropriate for a community that includes 13-year-olds. If you'd hesitate to say it in front of someone's parents, don't post it.",
     className: "bg-sky-soft patch-tilt-r",
   },
   {
@@ -34,7 +34,7 @@ const unacceptable = [
   "Harassment, bullying, or personal attacks of any kind.",
   "Discrimination or hateful conduct based on race, gender, sexuality, disability, religion, age, or anything else.",
   "Sharing someone's private information (doxxing), or sharing private conversations without consent.",
-  "Sexual or otherwise adult content — this is a community that includes minors.",
+  "Sexual or otherwise adult content. This is a community that includes minors.",
   "Using Patchwork Labs infrastructure for anything illegal, malicious, or outside your approved project.",
   "Spam, scams, or self-promotion that drowns out the community.",
 ];
@@ -49,7 +49,7 @@ export default function Conduct() {
         <p className="mt-6 max-w-2xl text-lg text-ink-soft">
           The short version: be kind, build cool things, and don&rsquo;t make
           this a worse place to be. Patchwork Labs is a community of makers
-          aged 13 and up from all over the world — this page is how we keep it
+          aged 13 and up from all over the world. This page is how we keep it
           a good one.
         </p>
       </section>
@@ -100,7 +100,7 @@ export default function Conduct() {
         <div className="patch mt-8 max-w-2xl bg-orchid-soft p-6 sm:p-8">
           <p className="text-ink-soft">
             If someone makes you uncomfortable or you see behavior that
-            breaks this code, tell us — even if you&rsquo;re not sure it
+            breaks this code, tell us, even if you&rsquo;re not sure it
             &ldquo;counts.&rdquo; Email{" "}
             <a
               href={`mailto:${CONTACT_EMAIL}`}
@@ -121,7 +121,7 @@ export default function Conduct() {
           <p className="mt-4 text-ink-soft">
             Depending on severity, responses range from a conversation to a
             warning to removal from the community and its infrastructure.
-            We&rsquo;d rather talk early than ban late — but keeping the
+            We&rsquo;d rather talk early than ban late, but keeping the
             community safe comes first, always.
           </p>
         </div>
