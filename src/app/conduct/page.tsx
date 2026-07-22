@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const expectations = [
   {
     title: "Be kind and patient",
-    body: "People here range from first-timers to seasoned builders, and from young teens to adults. Explain generously, ask honestly, and remember there's a person on the other end.",
+    body: "People here range from first-timers to seasoned builders. Explain generously, ask honestly, and remember there's a person on the other end.",
     className: "bg-grape-soft patch-tilt-l",
   },
   {
@@ -21,7 +21,7 @@ const expectations = [
   },
   {
     title: "Keep it appropriate",
-    body: "Many members are minors. Keep content and conversation appropriate for a community that includes young teens. If you'd hesitate to say it in front of someone's parents, don't post it.",
+    body: "Many members are minors, so keep content and conversation appropriate. If you'd hesitate to say it in front of someone's parents, don't post it.",
     className: "bg-sky-soft patch-tilt-r",
   },
   {
