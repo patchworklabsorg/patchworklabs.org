@@ -9,8 +9,8 @@ export default function Home() {
       <section className="flex flex-col-reverse items-start gap-10 py-16 sm:flex-row sm:items-center sm:py-24">
         <div>
           <p className="font-display text-lg text-grape">
-            rocket engines · scam detection · robotics · security · whatever
-            you&rsquo;re making
+            rocket engines · scam detection · robotics · security ·{" "}
+            <em>insert your project here</em>
           </p>
           <h1 className="font-display mt-4 text-4xl font-bold leading-tight sm:text-6xl">
             A community of makers, stitched together from around the world.
@@ -18,7 +18,7 @@ export default function Home() {
           <p className="mt-6 max-w-2xl text-lg text-ink-soft">
             We believe innovation isn&rsquo;t a function of age, institution,
             or pedigree. It&rsquo;s a function of curiosity and tenacity. If
-            you&rsquo;re 13 and up,{" "}
+            you&rsquo;re 13 and up;{" "}
             <a
               href={SLACK_URL}
               className="font-medium text-grape underline hover:text-orchid"
@@ -55,14 +55,10 @@ export default function Home() {
       <section className="py-12">
         <h2 className="font-display text-3xl font-bold">Our mission</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Our goal is to make making accessible and break down the barriers
-          that keep you from finishing your next project. Be that grants for
-          hardware, access to compute, or an amazing community of people,
-          we&rsquo;ve got you :)
-        </p>
-        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Patchwork Labs was founded in 2025 by Jasper Mayone, and the founding
-          idea of access without gatekeeping is still the whole point.
+          Patchwork Labs was founded in 2025 by Jasper Mayone to make making
+          accessible and break down the barriers that keep you from finishing
+          your next project. Be that grants for hardware, access to compute,
+          or an amazing community of people, we&rsquo;ve got you :)
         </p>
       </section>
 
