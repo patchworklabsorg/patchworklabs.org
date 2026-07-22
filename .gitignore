@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# dafont stitch fonts — license pending, redistribution prohibited
+# (OFL-licensed fonts in src/fonts/ ARE committed)
+src/fonts/PatchworkStitchlings.ttf
+src/fonts/KawaiiStitch.ttf
+
+# local screenshots / browser artifacts
+.playwright-mcp/
+*.png
+!public/**/*.png
+!src/app/icon.png

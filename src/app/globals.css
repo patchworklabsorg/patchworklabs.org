@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Palette derived from the Patchwork Labs logo: a quilt of purples with
+     one blue patch, one teal patch, and deep stitch-purple outlines. */
+  --color-quilt: #f7f5fb; /* page background — lavender-tinted paper */
+  --color-paper: #fefdff;
+  --color-ink: #2a2050; /* the stitch color */
+  --color-ink-soft: #5d5584;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-grape: #6c3ec1; /* primary — the main purple patches */
+  --color-grape-soft: #ebe3f9;
+  --color-violet: #9b7fd4; /* the light violet patch */
+  --color-violet-soft: #f0ebfb;
+  --color-orchid: #a44fc8; /* the magenta-leaning patch */
+  --color-orchid-soft: #f4e6f9;
+  --color-sky: #2f7cd6; /* the blue patch */
+  --color-sky-soft: #dfebfa;
+  --color-teal: #2aa187; /* the teal "L" patch */
+  --color-teal-soft: #daf1ea;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-shantell), var(--font-geist-sans), sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-quilt);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Dashed "stitch" outline used on patch cards and buttons */
+.stitch {
+  border: 2px dashed currentColor;
+  border-radius: 0.75rem;
+}
+
+/* A patch: stitched card sitting slightly askew on the quilt */
+.patch {
+  border: 2px dashed var(--color-ink-soft);
+  border-radius: 0.75rem;
+  box-shadow: 4px 5px 0 rgb(42 32 80 / 0.12);
+}
+
+.patch-tilt-l {
+  transform: rotate(-1.2deg);
+}
+
+.patch-tilt-r {
+  transform: rotate(1.1deg);
 }

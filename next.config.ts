@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      // Legacy location → canonical RFC 9116 path
+      {
+        source: "/security.txt",
+        destination: "/.well-known/security.txt",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
