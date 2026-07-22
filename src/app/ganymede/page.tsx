@@ -54,11 +54,17 @@ const criteria = [
   },
 ];
 
-const safeguards = [
+const safeguards: React.ReactNode[] = [
   "Guardian sign-off at signup for participants under 18.",
   "An acceptable use policy for the server environment, agreed to at onboarding.",
   "Elevated review for projects in sensitive dual-use areas (like biology or cybersecurity) — an extra check on intent and safeguards before a budget is granted.",
-  "A code of conduct for the community, with a clear way to report issues.",
+  <>
+    A{" "}
+    <Link href="/conduct" className="font-medium text-grape hover:underline">
+      code of conduct
+    </Link>{" "}
+    for the community, with a clear way to report issues.
+  </>,
   "A pre-publication check before findings are open-sourced.",
 ];
 
@@ -307,8 +313,8 @@ export default function Ganymede() {
           burying makers in bureaucracy:
         </p>
         <ul className="mt-6 max-w-2xl space-y-3 text-ink-soft">
-          {safeguards.map((item) => (
-            <li key={item} className="flex gap-3">
+          {safeguards.map((item, i) => (
+            <li key={i} className="flex gap-3">
               <span aria-hidden className="select-none text-grape">
                 ✦
               </span>
