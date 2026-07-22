@@ -328,7 +328,7 @@ export default function Ganymede() {
       <section className="py-12 pb-20">
         <h2 className="font-display text-3xl font-bold">Get involved</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          <div className="patch bg-grape-soft p-6">
+          <div className="patch bg-grape-soft p-6 patch-tilt-l">
             <h3 className="font-display text-xl font-bold">Students</h3>
             <p className="mt-3 text-ink-soft">
               Our pilot is currently invite-only, but the best way to get on
@@ -359,7 +359,7 @@ export default function Ganymede() {
               for an invite — a smoother flow is coming soon.
             </p>
           </div>
-          <div className="patch bg-teal-soft p-6">
+          <div className="patch bg-teal-soft p-6 patch-tilt-r">
             <h3 className="font-display text-xl font-bold">
               Companies &amp; partners
             </h3>

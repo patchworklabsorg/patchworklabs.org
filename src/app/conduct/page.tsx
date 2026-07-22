@@ -16,7 +16,7 @@ const expectations = [
   {
     title: "Help people get unstuck",
     body: "That's the whole point of Patchwork. Answer questions when you can, share what you learn, and celebrate other people's projects.",
-    className: "bg-teal-soft",
+    className: "bg-teal-soft patch-tilt-r",
   },
   {
     title: "Keep it appropriate",
@@ -26,7 +26,7 @@ const expectations = [
   {
     title: "Respect the resources",
     body: "Compute, grants, and infrastructure are shared and donated. Use them for the projects they were granted for, and don't abuse access.",
-    className: "bg-violet-soft",
+    className: "bg-violet-soft patch-tilt-l",
   },
 ];
 
