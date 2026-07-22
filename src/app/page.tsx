@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SLACK_EMAIL, SLACK_URL } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
@@ -17,14 +22,7 @@ export default function Home() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-ink-soft">
             We believe innovation isn&rsquo;t a function of age, institution,
-            or pedigree. It&rsquo;s a function of curiosity and tenacity. If
-            you&rsquo;re 13 and up;{" "}
-            <a
-              href={SLACK_URL}
-              className="font-medium text-grape underline hover:text-orchid"
-            >
-              come join us!
-            </a>
+            or pedigree. It&rsquo;s a function of curiosity and tenacity.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a

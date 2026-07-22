@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Team",
   description:
     "The people behind Patchwork Labs: makers, organizers, and volunteers building a home for the next generation of makers.",
+  alternates: { canonical: "/team" },
 };
 
 type TeamMember = {

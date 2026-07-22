@@ -5,12 +5,13 @@ export const metadata: Metadata = {
   title: "Code of Conduct",
   description:
     "The Patchwork Labs code of conduct: how we treat each other in the Slack, on Ganymede infrastructure, and everywhere the community gathers.",
+  alternates: { canonical: "/conduct" },
 };
 
 const expectations = [
   {
     title: "Be kind and patient",
-    body: "People here range from first-timers to seasoned builders, and from 13-year-olds to adults. Explain generously, ask honestly, and remember there's a person on the other end.",
+    body: "People here range from first-timers to seasoned builders, and from young teens to adults. Explain generously, ask honestly, and remember there's a person on the other end.",
     className: "bg-grape-soft patch-tilt-l",
   },
   {
@@ -20,7 +21,7 @@ const expectations = [
   },
   {
     title: "Keep it appropriate",
-    body: "Many members are minors. Keep content and conversation appropriate for a community that includes 13-year-olds. If you'd hesitate to say it in front of someone's parents, don't post it.",
+    body: "Many members are minors. Keep content and conversation appropriate for a community that includes young teens. If you'd hesitate to say it in front of someone's parents, don't post it.",
     className: "bg-sky-soft patch-tilt-r",
   },
   {
@@ -49,8 +50,7 @@ export default function Conduct() {
         <p className="mt-6 max-w-2xl text-lg text-ink-soft">
           The short version: be kind, build cool things, and don&rsquo;t make
           this a worse place to be. Patchwork Labs is a community of makers
-          aged 13 and up from all over the world. This page is how we keep it
-          a good one.
+          from all over the world. This page is how we keep it a good one.
         </p>
       </section>
 

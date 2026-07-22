@@ -24,15 +24,53 @@ export const metadata: Metadata = {
     template: "%s | Patchwork Labs",
   },
   description:
-    "A community of makers from around the world, building everything from rocket engines to scam detection tools. Grants, compute, and a community for anyone 13 and up.",
+    "A community of makers from around the world, building everything from rocket engines to scam detection tools. Grants, compute, and people who help each other build.",
   openGraph: {
     title: "Patchwork Labs",
     description:
-      "Making making accessible: hardware grants, compute capacity, and a community of makers for anyone 13 and up.",
+      "Making making accessible: hardware grants, compute, and a community of makers who help each other build.",
     url: SITE_URL,
     siteName: "Patchwork Labs",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Patchwork Labs: a community of makers, stitched together from around the world.",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Patchwork Labs",
+    description:
+      "Making making accessible: hardware grants, compute, and a community of makers who help each other build.",
+    images: ["/og.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+// Nonprofit structured data for search engines.
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  name: "Patchwork Labs",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  email: "team@patchworklabs.org",
+  foundingDate: "2025",
+  founder: {
+    "@type": "Person",
+    name: "Jasper Mayone",
+  },
+  nonprofitStatus: "Nonprofit501c3",
+  taxID: "39-3310316",
+  description:
+    "A community of makers from around the world. Grants for hardware, access to compute, and people who help each other build.",
 };
 
 export default function RootLayout({
@@ -45,6 +83,12 @@ export default function RootLayout({
       <body
         className={`${GeistSans.variable} ${shantellSans.variable} flex min-h-screen flex-col antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

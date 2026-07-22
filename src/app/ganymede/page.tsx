@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Project Ganymede",
   description:
     "Serious compute for anyone with a good idea and the drive to build it.",
+  alternates: { canonical: "/ganymede" },
 };
 
 const steps = [
