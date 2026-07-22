@@ -5,7 +5,7 @@ import { GANYMEDE_EMAIL, SLACK_EMAIL, SLACK_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Project Ganymede",
   description:
-    "Real GPU compute for anyone with a good idea and the drive to build it — no university affiliation, no relocation, no institutional gatekeeping.",
+    "Serious compute for anyone with a good idea and the drive to build it.",
 };
 
 const steps = [
@@ -84,53 +84,42 @@ export default function Ganymede() {
           Project Ganymede
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-ink-soft">
-          Real GPU compute for anyone locked out of institutional resources —
-          no university affiliation, no relocation, no institutional
-          gatekeeping. Just a good idea and the drive to build it.
+          Serious compute for anyone locked out of institutional resources —
+          just a good idea and the drive to build it.
         </p>
         <div className="patch mt-8 inline-block bg-orchid-soft px-4 py-2 text-sm font-medium">
           Current status: early stages — pilot underway
         </div>
       </section>
 
-      {/* The gap */}
+      {/* Our focus */}
       <section className="py-12">
-        <h2 className="font-display text-3xl font-bold">
-          The gap we&rsquo;re closing
-        </h2>
-        <div className="mt-4 max-w-2xl space-y-4 text-lg text-ink-soft">
-          <p>
-            High-performance compute is abundant for university researchers and
-            industry — and almost entirely out of reach for everyone else,
-            especially high schoolers. Nearly every existing research
-            opportunity for pre-college students runs through a university:
-            programs like MIT PRIMES, NYU ARISE, and Clark Scholars pair
-            students with faculty mentors on campus. That model works well for
-            the students who get in, but it has two structural limits: a
-            handful of seats per year, and most require living near the
-            university or relocating for the summer. Students without a
-            research university nearby — or without the profile to win one of
-            a few dozen national seats — are largely locked out.
-          </p>
-          <p>
-            Project Ganymede targets the layer underneath that. No faculty
-            placement required. No relocation. No institutional sponsorship.
-            Just a project idea, real compute, and a community to build it with
-            — alone or in a small, self-organized group.
-          </p>
-        </div>
+        <h2 className="font-display text-3xl font-bold">Our focus</h2>
+        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
+          High-performance compute is abundant for university researchers and
+          industry, but almost entirely out of reach for everyone else —
+          especially high schoolers. Nearly every existing research
+          opportunity for pre-college students runs through a university:
+          programs like MIT PRIMES, NYU ARISE, and Clark Scholars pair
+          students with faculty mentors on campus. That model works well for
+          the students who get in, but it&rsquo;s constrained by the number of
+          faculty and often requires relocating near the university for the
+          summer. Students without a research university nearby — or without
+          the profile to win one of a few dozen national seats — are largely
+          locked out.
+        </p>
       </section>
 
       {/* Mission */}
       <section className="py-12">
         <h2 className="font-display text-3xl font-bold">Our mission</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Give capable, curious students access to real GPU compute, let them
-          pursue ambitious project ideas, and support them through to a
-          finished, shared result. The bet is simple: hand students real
-          resources, and some of them will build genuinely innovative things —
-          the rest will learn far more than they would have otherwise. Either
-          outcome is a win.
+          Give capable, curious students access to compute, let them pursue
+          ambitious project ideas, and support them through to a finished,
+          shared result. The bet is simple: hand students real resources and
+          they&rsquo;ll build genuinely innovative things — and even when a
+          project doesn&rsquo;t pan out, they&rsquo;ll learn far more than
+          they would have otherwise. Either outcome is a win.
         </p>
       </section>
 
@@ -185,12 +174,11 @@ export default function Ganymede() {
             world he had no formal path into otherwise.
           </p>
           <p>
-            That&rsquo;s the model here. Talent and initiative are the entry
-            ticket, not institutional pedigree. A student doesn&rsquo;t need to
-            attend the right university or win one of a handful of national
-            seats — they need a good idea and the drive to see it through.
-            Ganymede provides the elevation: real compute, real infrastructure,
-            a seat at a table they couldn&rsquo;t otherwise reach.
+            A student doesn&rsquo;t need to attend the right university or win
+            one of a handful of national seats — they need a good idea and the
+            drive to see it through. Ganymede provides real compute, real
+            infrastructure, and a seat at a table they couldn&rsquo;t
+            otherwise reach.
           </p>
           <p>
             Fittingly, Ganymede is also the largest moon in the solar system —
@@ -205,9 +193,8 @@ export default function Ganymede() {
       <section className="py-12">
         <h2 className="font-display text-3xl font-bold">Who it&rsquo;s for</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Students work independently or in small, self-organized groups —
-          Ganymede doesn&rsquo;t route through schools or require institutional
-          sponsorship. Our priority audience is high school students, who
+          Students work independently or in small, self-organized groups. Our
+          priority audience is high school students, who
           currently have almost no access to programs like this. Minimum age is
           13. As the program grows, we plan to open up to anyone without access
           to university-level resources — community college students,
@@ -287,8 +274,8 @@ export default function Ganymede() {
         <div className="patch bg-sky-soft p-6 patch-tilt-l">
           <h2 className="font-display text-2xl font-bold">Compute</h2>
           <p className="mt-3 text-ink-soft">
-            Ganymede currently runs on GPU compute sourced opportunistically
-            from cloud providers. The target: self-hosted servers, built from
+            Ganymede currently runs on compute sourced opportunistically from
+            cloud providers. The target: self-hosted servers, built from
             in-kind hardware donations.
           </p>
         </div>
@@ -331,9 +318,9 @@ export default function Ganymede() {
           <div className="patch bg-grape-soft p-6 patch-tilt-l">
             <h3 className="font-display text-xl font-bold">Students</h3>
             <p className="mt-3 text-ink-soft">
-              Our pilot is currently invite-only, but the best way to get on
-              our radar is to join the Patchwork Labs Slack community — or
-              email your project pitch straight to{" "}
+              Our pilot is currently invite-only, but the best way to
+              introduce yourself is to join the Patchwork Labs Slack community
+              — or email your project pitch straight to{" "}
               <a
                 href={`mailto:${GANYMEDE_EMAIL}`}
                 className="font-medium text-grape hover:underline"

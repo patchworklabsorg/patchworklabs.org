@@ -2,24 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { SLACK_EMAIL, SLACK_URL } from "@/lib/site";
 
-const offerings = [
-  {
-    title: "Hardware grants",
-    body: "Grants for hardware and tools, so the parts list is never the reason a project stalls.",
-    className: "bg-violet-soft patch-tilt-l",
-  },
-  {
-    title: "Compute capacity",
-    body: "Access to real compute for projects that need it — training runs, simulations, big builds.",
-    className: "bg-sky-soft",
-  },
-  {
-    title: "Community & mentors",
-    body: "Makers and mentors who actually want to help you get unstuck, whatever hour it is.",
-    className: "bg-teal-soft patch-tilt-r",
-  },
-];
-
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-4xl px-6">
@@ -35,8 +17,14 @@ export default function Home() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-ink-soft">
             We believe innovation isn&rsquo;t a function of age, institution,
-            or pedigree. It&rsquo;s a function of curiosity and follow-through.
-            So we accept anyone 13 and up — and we get out of the way.
+            or pedigree. It&rsquo;s a function of curiosity and tenacity. If
+            you&rsquo;re 13 and up,{" "}
+            <a
+              href={SLACK_URL}
+              className="font-medium text-grape underline hover:text-orchid"
+            >
+              come join us!
+            </a>
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
@@ -67,24 +55,15 @@ export default function Home() {
       <section className="py-12">
         <h2 className="font-display text-3xl font-bold">Our mission</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          We want to make making accessible. That means grants for hardware,
-          access to compute capacity, and a community of people who actually
-          want to help you get unstuck — whether you&rsquo;re debugging a model
-          or soldering a board at 1am.
+          Our goal is to make making accessible and break down the barriers
+          that keep you from finishing your next project — be that grants for
+          hardware, access to compute, or an amazing community of people.
+          We&rsquo;ve got you :)
         </p>
-      </section>
-
-      {/* What we offer */}
-      <section className="py-12">
-        <h2 className="font-display text-3xl font-bold">What we offer</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-3">
-          {offerings.map((o) => (
-            <div key={o.title} className={`patch p-5 ${o.className}`}>
-              <h3 className="font-display text-xl font-bold">{o.title}</h3>
-              <p className="mt-2 text-sm text-ink-soft">{o.body}</p>
-            </div>
-          ))}
-        </div>
+        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
+          Patchwork Labs was founded in 2025 by Jasper Mayone, and the founding
+          idea — access without gatekeeping — is still the whole point.
+        </p>
       </section>
 
       {/* Projects underway */}
@@ -98,9 +77,8 @@ export default function Home() {
             Project Ganymede
           </h3>
           <p className="mt-3 max-w-2xl text-ink-soft">
-            A program giving makers access to real GPU compute — no university
-            affiliation or relocation required — so they can build serious
-            technical projects and publish what they make.
+            A program giving makers access to compute — unblocking projects
+            that would have otherwise been infeasible.
           </p>
           <Link
             href="/ganymede"
@@ -117,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* Community */}
-      <section className="py-12">
+      <section className="py-12 pb-20">
         <h2 className="font-display text-3xl font-bold">Community</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           We&rsquo;re a growing group of makers — currently 56 members strong on
@@ -143,18 +121,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Story */}
-      <section className="py-12 pb-20">
-        <h2 className="font-display text-3xl font-bold">Our story</h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Patchwork Labs was founded in 2025 by Jasper Mayone, who set out to
-          build something simpler: a place where young makers could get real
-          resources and real support, without unnecessary restrictions on who
-          gets to participate or what they&rsquo;re allowed to build. That
-          founding idea — access without gatekeeping — is still the whole
-          point.
-        </p>
-      </section>
     </div>
   );
 }
