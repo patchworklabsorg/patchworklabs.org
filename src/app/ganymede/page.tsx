@@ -72,7 +72,7 @@ export default function Ganymede() {
   return (
     <div className="mx-auto w-full max-w-4xl px-6">
       {/* Hero */}
-      <section className="py-16 sm:py-24">
+      <section className="py-12 sm:py-16">
         <p className="font-display text-lg text-teal">
           A program of{" "}
           <Link href="/" className="underline hover:text-grape">
@@ -93,7 +93,7 @@ export default function Ganymede() {
       </section>
 
       {/* Our focus */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">Our focus</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           High-performance compute is abundant for university researchers and
@@ -111,7 +111,7 @@ export default function Ganymede() {
       </section>
 
       {/* Mission */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">Our mission</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Give capable, curious students access to compute, let them pursue
@@ -124,7 +124,7 @@ export default function Ganymede() {
       </section>
 
       {/* Theory of change */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">
           Why we think it works
         </h2>
@@ -161,7 +161,7 @@ export default function Ganymede() {
       </section>
 
       {/* Why Ganymede */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">
           Why &ldquo;Ganymede&rdquo;
         </h2>
@@ -191,7 +191,7 @@ export default function Ganymede() {
       </section>
 
       {/* Who it's for */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">Who it&rsquo;s for</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Students work independently or in small, self-organized groups. Our
@@ -207,7 +207,7 @@ export default function Ganymede() {
       </section>
 
       {/* How it works */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">How it works</h2>
         <ol className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, i) => (
@@ -225,7 +225,7 @@ export default function Ganymede() {
       </section>
 
       {/* Approval criteria */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">
           What makes a good pitch
         </h2>
@@ -258,7 +258,7 @@ export default function Ganymede() {
       </section>
 
       {/* Community & mentorship */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">
           Community &amp; mentorship
         </h2>
@@ -271,7 +271,7 @@ export default function Ganymede() {
       </section>
 
       {/* Compute + publication */}
-      <section className="grid gap-6 py-12 sm:grid-cols-2">
+      <section className="grid gap-6 py-8 sm:grid-cols-2">
         <div className="patch bg-sky-soft p-6 patch-tilt-l">
           <h2 className="font-display text-2xl font-bold">Compute</h2>
           <p className="mt-3 text-ink-soft">
@@ -291,7 +291,7 @@ export default function Ganymede() {
       </section>
 
       {/* Safety */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">
           Safety &amp; responsible use
         </h2>
@@ -313,7 +313,7 @@ export default function Ganymede() {
       </section>
 
       {/* Get involved */}
-      <section className="py-12 pb-20">
+      <section className="py-8 pb-16">
         <h2 className="font-display text-3xl font-bold">Get involved</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <div className="patch bg-grape-soft p-6 patch-tilt-l">

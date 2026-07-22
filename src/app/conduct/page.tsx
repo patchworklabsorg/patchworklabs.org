@@ -42,7 +42,7 @@ const unacceptable = [
 export default function Conduct() {
   return (
     <div className="mx-auto w-full max-w-4xl px-6">
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-14">
         <h1 className="font-display text-4xl font-bold leading-tight sm:text-5xl">
           Code of conduct
         </h1>
@@ -68,7 +68,7 @@ export default function Conduct() {
       </section>
 
       {/* Unacceptable */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">
           What we won&rsquo;t tolerate
         </h2>
@@ -85,7 +85,7 @@ export default function Conduct() {
       </section>
 
       {/* Scope */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">Where this applies</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Everywhere the community gathers: the Slack, Project Ganymede
@@ -95,7 +95,7 @@ export default function Conduct() {
       </section>
 
       {/* Reporting */}
-      <section className="py-12 pb-20">
+      <section className="py-8 pb-16">
         <h2 className="font-display text-3xl font-bold">Reporting a problem</h2>
         <div className="patch mt-8 max-w-2xl bg-orchid-soft p-6 sm:p-8">
           <p className="text-ink-soft">

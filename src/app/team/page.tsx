@@ -39,7 +39,7 @@ const team: TeamMember[] = [
     pronouns: "he/him",
     role: "Secretary",
     patchColor: "bg-teal-soft",
-    photo: "/team/kieran-card.jpg",
+    photo: "/team/kieran-v2.png",
     bio: [
       "Kieran is the Secretary for Patchwork Labs. He is currently studying Cyber Operations and Computer Engineering at Cedarville University. With a huge passion for robotics and hardware, you can usually find him either tinkering with a board or fixing up his homelab. Solving the little problems in life is his passion, which leads to many a weekend project.",
     ],
@@ -75,7 +75,7 @@ function initials(name: string) {
 export default function Team() {
   return (
     <div className="mx-auto w-full max-w-4xl px-6">
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-14">
         <h1 className="font-display text-4xl font-bold leading-tight sm:text-5xl">
           The team
         </h1>

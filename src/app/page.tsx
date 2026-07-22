@@ -52,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* Mission */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">Our mission</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Patchwork Labs was founded in 2025 by Jasper Mayone to make making
@@ -63,35 +63,40 @@ export default function Home() {
       </section>
 
       {/* Projects underway */}
-      <section className="py-12">
+      <section className="py-8">
         <h2 className="font-display text-3xl font-bold">Projects underway</h2>
-        <div className="patch mt-8 bg-grape-soft p-6 sm:p-8">
-          <p className="font-display text-sm font-bold uppercase tracking-wide text-orchid">
-            First major initiative
-          </p>
-          <h3 className="font-display mt-2 text-2xl font-bold">
-            Project Ganymede
-          </h3>
-          <p className="mt-3 max-w-2xl text-ink-soft">
-            A program giving makers access to compute, unblocking projects
-            that would have otherwise been infeasible.
-          </p>
-          <Link
-            href="/ganymede"
-            className="mt-5 inline-block font-medium text-grape hover:underline"
-          >
-            More on Project Ganymede →
-          </Link>
+        <div className="mt-6 grid gap-6 sm:grid-cols-[3fr_2fr]">
+          <div className="patch bg-grape-soft p-6 patch-tilt-l sm:p-8">
+            <p className="font-display text-sm font-bold uppercase tracking-wide text-orchid">
+              First major initiative
+            </p>
+            <h3 className="font-display mt-2 text-2xl font-bold">
+              Project Ganymede
+            </h3>
+            <p className="mt-3 max-w-2xl text-ink-soft">
+              A program giving makers access to compute, unblocking projects
+              that would have otherwise been infeasible.
+            </p>
+            <Link
+              href="/ganymede"
+              className="mt-5 inline-block font-medium text-grape hover:underline"
+            >
+              More on Project Ganymede →
+            </Link>
+          </div>
+          <div className="patch bg-teal-soft p-6 patch-tilt-r">
+            <h3 className="font-display text-xl font-bold">Member projects</h3>
+            <p className="mt-3 text-ink-soft">
+              Beyond Ganymede, members are pursuing their own independent
+              projects across robotics, security, and beyond, with more
+              community-driven initiatives on the way.
+            </p>
+          </div>
         </div>
-        <p className="mt-6 max-w-2xl text-ink-soft">
-          Beyond Ganymede, individual Patchwork Labs members are pursuing their
-          own independent projects across robotics, security, and beyond, with
-          more community-driven initiatives on the way.
-        </p>
       </section>
 
       {/* Community */}
-      <section className="py-12 pb-20">
+      <section className="py-8 pb-16">
         <h2 className="font-display text-3xl font-bold">Community</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           We&rsquo;re a growing group of makers, currently 56 members strong on
