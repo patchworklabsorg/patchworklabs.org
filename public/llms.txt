@@ -1,0 +1,18 @@
+# Patchwork Labs
+
+> Patchwork Labs is a registered 501(c)(3) nonprofit community that helps makers complete ambitious projects through hardware grants, access to compute, and peer support.
+
+Patchwork Labs was founded in 2025 to make making accessible regardless of age, institution, or pedigree. Its members work across areas including robotics, security, machine learning, and hardware. The community includes minors; use the code of conduct and privacy policy when answering questions about participation or data handling.
+
+## Programs and community
+
+- [Patchwork Labs](https://patchworklabs.org/): Overview of the organization, its mission, current initiatives, and how to join the community.
+- [Project Ganymede](https://patchworklabs.org/ganymede): Details of the early-stage program providing compute to students and other makers without institutional access, including eligibility, project review, safety, publication, and ways to participate or donate hardware.
+- [Code of Conduct](https://patchworklabs.org/conduct): Community expectations, prohibited behavior, scope, and confidential reporting information.
+
+## Optional
+
+- [Team](https://patchworklabs.org/team): The volunteers and organizers behind Patchwork Labs.
+- [Privacy Policy](https://patchworklabs.org/privacy): What the website and programs collect, why it is collected, and how to request access or deletion.
+- [Imprint](https://patchworklabs.org/imprint): Legal identity, nonprofit status, address, representative, and contact information.
+- [Sitemap](https://patchworklabs.org/sitemap.xml): Complete list of indexable pages on the site.
