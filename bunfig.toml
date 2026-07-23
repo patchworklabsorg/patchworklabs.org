@@ -1,0 +1,20 @@
+[install]
+# The global ~/.bunfig.toml enforces a 7-day minimumReleaseAge as a
+# supply-chain guard. Security patches for the packages below get bumped
+# here same-day (Dependabot), so exempt them from the age gate.
+minimumReleaseAgeExcludes = [
+  "next",
+  "eslint-config-next",
+  "postcss",
+  # bun does not appear to match "@next/*" scope globs; list explicitly.
+  "@next/env",
+  "@next/eslint-plugin-next",
+  "@next/swc-darwin-arm64",
+  "@next/swc-darwin-x64",
+  "@next/swc-linux-arm64-gnu",
+  "@next/swc-linux-arm64-musl",
+  "@next/swc-linux-x64-gnu",
+  "@next/swc-linux-x64-musl",
+  "@next/swc-win32-arm64-msvc",
+  "@next/swc-win32-x64-msvc",
+]

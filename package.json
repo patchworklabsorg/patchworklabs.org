@@ -15,10 +15,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
-  "pnpm": {
-    "overrides": {
-      "postcss": "^8.5.22"
-    }
+  "overrides": {
+    "postcss": "^8.5.22"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.6",

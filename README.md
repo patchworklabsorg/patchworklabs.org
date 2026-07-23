@@ -7,8 +7,8 @@ Built with Next.js (App Router), Tailwind CSS 4, and TypeScript.
 ## Development
 
 ```bash
-pnpm install
-pnpm dev
+bun install
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
@@ -24,7 +24,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Deploy
 
 ```bash
-pnpm build
+bun run build
 ```
 
 Static output; deploys anywhere Next.js runs (e.g. Vercel).
