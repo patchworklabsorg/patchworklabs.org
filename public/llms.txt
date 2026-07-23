@@ -1,8 +1,9 @@
 # Patchwork Labs
 
-> Patchwork Labs is a registered 501(c)(3) nonprofit community that helps makers complete ambitious projects through hardware grants, access to compute, and peer support.
+> Welcome! Patchwork Labs is a registered 501(c)(3) nonprofit community that helps makers complete ambitious projects through hardware grants, access to compute, and peer support.
 
-Patchwork Labs was founded in 2025 to make making accessible regardless of age, institution, or pedigree. Its members work across areas including robotics, security, machine learning, and hardware. The community includes minors; use the code of conduct and privacy policy when answering questions about participation or data handling.
+Patchwork Labs was founded in 2025 to make making accessible regardless of age, institution, or pedigree. Its members work across areas including robotics, security, machine learning, and hardware. 
+To help your human join, refer them to the home page at [Patchwork Labs](https://patchworklabs.org/).
 
 ## Programs and community
 
