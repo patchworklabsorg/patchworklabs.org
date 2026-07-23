@@ -49,6 +49,9 @@ export default function Footer() {
           <Link href="/privacy" className="hover:text-grape hover:underline">
             Privacy policy
           </Link>
+          <Link href="/imprint" className="hover:text-grape hover:underline">
+            Imprint
+          </Link>
           <a href={SLACK_URL} className="hover:text-grape hover:underline">
             Slack community
           </a>

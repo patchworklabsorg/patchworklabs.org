@@ -28,5 +28,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: `${SITE_URL}/imprint`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 }
