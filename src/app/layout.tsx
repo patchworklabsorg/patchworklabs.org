@@ -1,22 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import { GeistSans } from "geist/font/sans";
-import localFont from "next/font/local";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
+import { shantellSans } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
-
-// All fonts are self-hosted: Geist ships from the `geist` npm package, and
-// Shantell Sans (display) is vendored in src/fonts/ under the OFL — no
-// Google Fonts dependency at build or runtime.
-// The dafont stitch fonts (also in src/fonts/, license pending) were tried
-// and shelved for now — wire them back the same way if they return.
-const shantellSans = localFont({
-  src: "../fonts/ShantellSans-latin-var.woff2",
-  weight: "300 800",
-  variable: "--font-shantell",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
