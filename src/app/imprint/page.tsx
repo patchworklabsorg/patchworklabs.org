@@ -29,13 +29,10 @@ export default function Imprint() {
             A registered 501(c)(3) nonprofit organization (EIN: 39-3310316),
             incorporated in the United States.
           </p>
-          {/* TODO: replace with the org's registered street address before
-              this ships. § 5 DDG requires a full postal address; a PO box
-              is not sufficient. */}
           <p className="mt-4 text-ink-soft">
-            [Street address]
+            36 Old Quarry Road
             <br />
-            [City, State ZIP]
+            Fayston, VT 05673
             <br />
             United States
           </p>
