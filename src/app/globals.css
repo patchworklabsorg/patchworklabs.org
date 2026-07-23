@@ -49,3 +49,39 @@ body {
 .patch-tilt-r {
   transform: rotate(1.1deg);
 }
+
+/* Page navigation: the nav and footer hold still while the main content
+   cross-fades with a slight rise, like swapping one patch on the quilt.
+   Browsers without the View Transitions API just get instant swaps. */
+main {
+  view-transition-name: main-content;
+}
+
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vt-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+::view-transition-old(main-content) {
+  animation: vt-fade-out 0.15s ease-in both;
+}
+
+::view-transition-new(main-content) {
+  animation: vt-fade-in-up 0.25s 0.1s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

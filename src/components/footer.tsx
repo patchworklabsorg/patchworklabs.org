@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { CONTACT_EMAIL, DONATE_EMAIL, SLACK_URL } from "@/lib/site";
 
 export default function Footer() {

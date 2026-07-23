@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { SLACK_EMAIL, SLACK_URL } from "@/lib/site";
 
 export const metadata: Metadata = {

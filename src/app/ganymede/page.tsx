@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { GANYMEDE_EMAIL, SLACK_EMAIL, SLACK_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
