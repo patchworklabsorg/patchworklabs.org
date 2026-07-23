@@ -12,47 +12,47 @@ importers:
   .:
     dependencies:
       geist:
-        specifier: 1.7.2
+        specifier: ^1.7.2
         version: 1.7.2(next@15.5.21(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       next:
-        specifier: 15.5.21
+        specifier: ^15.5.21
         version: 15.5.21(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-view-transitions:
-        specifier: 0.3.5
+        specifier: ^0.3.5
         version: 0.3.5(next@15.5.21(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
-        specifier: 19.1.0
+        specifier: ^19.1.0
         version: 19.1.0
       react-dom:
-        specifier: 19.1.0
+        specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
       '@eslint/eslintrc':
-        specifier: 3.3.6
+        specifier: ^3.3.6
         version: 3.3.6
       '@tailwindcss/postcss':
-        specifier: 4.3.2
+        specifier: ^4.3.2
         version: 4.3.2
       '@types/node':
-        specifier: 20.19.43
+        specifier: ^20.19.43
         version: 20.19.43
       '@types/react':
-        specifier: 19.2.17
+        specifier: ^19.2.17
         version: 19.2.17
       '@types/react-dom':
-        specifier: 19.2.3
+        specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.17)
       eslint:
-        specifier: 9.39.5
+        specifier: ^9.39.5
         version: 9.39.5(jiti@2.7.0)
       eslint-config-next:
-        specifier: 15.5.21
+        specifier: ^15.5.21
         version: 15.5.21(eslint@9.39.5(jiti@2.7.0))(typescript@5.9.3)
       tailwindcss:
-        specifier: 4.3.2
+        specifier: ^4.3.2
         version: 4.3.2
       typescript:
-        specifier: 5.9.3
+        specifier: ^5.9.3
         version: 5.9.3
 
 packages:
