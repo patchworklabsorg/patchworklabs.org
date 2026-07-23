@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import { GeistSans } from "geist/font/sans";
 import localFont from "next/font/local";
@@ -55,6 +55,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f7f5fb" },
+    { media: "(prefers-color-scheme: dark)", color: "#16112a" },
+  ],
+};
+
 // Nonprofit structured data for search engines.
 const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -81,10 +88,17 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`${GeistSans.variable} ${shantellSans.variable} flex min-h-screen flex-col antialiased`}
         >
+          {/* Applies a stored light/dark choice before first paint so there's
+              no flash. With no stored choice, CSS follows the system theme. */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`,
+            }}
+          />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{

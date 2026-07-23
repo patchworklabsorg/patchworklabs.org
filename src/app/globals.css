@@ -1,23 +1,96 @@
 @import "tailwindcss";
 
-@theme inline {
-  /* Palette derived from the Patchwork Labs logo: a quilt of purples with
-     one blue patch, one teal patch, and deep stitch-purple outlines. */
-  --color-quilt: #f7f5fb; /* page background — lavender-tinted paper */
-  --color-paper: #fefdff;
-  --color-ink: #2a2050; /* the stitch color */
-  --color-ink-soft: #5d5584;
+/* Palette derived from the Patchwork Labs logo: a quilt of purples with
+   one blue patch, one teal patch, and deep stitch-purple outlines.
+   Light values live on :root; dark values apply automatically via
+   prefers-color-scheme, or explicitly via data-theme (the nav toggle). */
+:root {
+  color-scheme: light;
 
-  --color-grape: #6c3ec1; /* primary — the main purple patches */
-  --color-grape-soft: #ebe3f9;
-  --color-violet: #9b7fd4; /* the light violet patch */
-  --color-violet-soft: #f0ebfb;
-  --color-orchid: #a44fc8; /* the magenta-leaning patch */
-  --color-orchid-soft: #f4e6f9;
-  --color-sky: #2f7cd6; /* the blue patch */
-  --color-sky-soft: #dfebfa;
-  --color-teal: #2aa187; /* the teal "L" patch */
-  --color-teal-soft: #daf1ea;
+  --quilt: #f7f5fb; /* page background — lavender-tinted paper */
+  --paper: #fefdff;
+  --ink: #2a2050; /* the stitch color */
+  --ink-soft: #5d5584;
+
+  --grape: #6c3ec1; /* primary — the main purple patches */
+  --grape-soft: #ebe3f9;
+  --violet: #9b7fd4; /* the light violet patch */
+  --violet-soft: #f0ebfb;
+  --orchid: #a44fc8; /* the magenta-leaning patch */
+  --orchid-soft: #f4e6f9;
+  --sky: #2f7cd6; /* the blue patch */
+  --sky-soft: #dfebfa;
+  --teal: #2aa187; /* the teal "L" patch */
+  --teal-soft: #daf1ea;
+
+  --patch-shadow: rgb(42 32 80 / 0.12);
+}
+
+/* Dark palette: the quilt at night. Same patches, lantern-lit. */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --quilt: #16112a;
+  --paper: #1f1938;
+  --ink: #e9e4f7;
+  --ink-soft: #a79ecb;
+
+  --grape: #a988e9;
+  --grape-soft: #322557;
+  --violet: #b8a1e4;
+  --violet-soft: #2c2349;
+  --orchid: #cd8ce6;
+  --orchid-soft: #3a214c;
+  --sky: #74a9eb;
+  --sky-soft: #1d2c49;
+  --teal: #4fc4a9;
+  --teal-soft: #163a32;
+
+  --patch-shadow: rgb(0 0 0 / 0.4);
+}
+
+/* No explicit choice stored: follow the system, and keep following it
+   live if it changes. Values mirror [data-theme="dark"] above. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --quilt: #16112a;
+    --paper: #1f1938;
+    --ink: #e9e4f7;
+    --ink-soft: #a79ecb;
+
+    --grape: #a988e9;
+    --grape-soft: #322557;
+    --violet: #b8a1e4;
+    --violet-soft: #2c2349;
+    --orchid: #cd8ce6;
+    --orchid-soft: #3a214c;
+    --sky: #74a9eb;
+    --sky-soft: #1d2c49;
+    --teal: #4fc4a9;
+    --teal-soft: #163a32;
+
+    --patch-shadow: rgb(0 0 0 / 0.4);
+  }
+}
+
+@theme inline {
+  --color-quilt: var(--quilt);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+
+  --color-grape: var(--grape);
+  --color-grape-soft: var(--grape-soft);
+  --color-violet: var(--violet);
+  --color-violet-soft: var(--violet-soft);
+  --color-orchid: var(--orchid);
+  --color-orchid-soft: var(--orchid-soft);
+  --color-sky: var(--sky);
+  --color-sky-soft: var(--sky-soft);
+  --color-teal: var(--teal);
+  --color-teal-soft: var(--teal-soft);
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-shantell), var(--font-geist-sans), sans-serif;
@@ -39,7 +112,7 @@ body {
 .patch {
   border: 2px dashed var(--color-ink-soft);
   border-radius: 0.75rem;
-  box-shadow: 4px 5px 0 rgb(42 32 80 / 0.12);
+  box-shadow: 4px 5px 0 var(--patch-shadow);
 }
 
 .patch-tilt-l {

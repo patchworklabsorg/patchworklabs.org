@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Link } from "next-view-transitions";
 import { useState } from "react";
+import ThemeToggle from "@/components/theme-toggle";
 import { SLACK_URL } from "@/lib/site";
 
 export default function Nav() {
@@ -42,17 +43,21 @@ export default function Nav() {
           >
             Join the Slack
           </a>
+          <ThemeToggle />
         </nav>
 
         {/* Mobile menu toggle */}
-        <button
-          type="button"
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-          className="stitch bg-grape-soft px-3 py-1.5 text-sm font-medium sm:hidden"
-        >
-          {open ? "Close" : "Menu"}
-        </button>
+        <div className="flex items-center gap-3 sm:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+            className="stitch bg-grape-soft px-3 py-1.5 text-sm font-medium"
+          >
+            {open ? "Close" : "Menu"}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
