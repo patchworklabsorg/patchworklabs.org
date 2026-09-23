@@ -25,7 +25,7 @@ const team: TeamMember[] = [
   {
     name: "Jasper Mayone",
     pronouns: "he/they",
-    role: "Founder & Operations Director",
+    role: "Founder & Director of Programs",
     patchColor: "bg-grape-soft",
     photo: "/team/jasper-card.jpg",
     bio: [
@@ -38,12 +38,19 @@ const team: TeamMember[] = [
   {
     name: "Kieran Klukas",
     pronouns: "he/him",
-    role: "Secretary",
+    role: "Board Secretary/Treasurer",
     patchColor: "bg-teal-soft",
     photo: "/team/kieran-v2.png",
     bio: [
       "Kieran is the Secretary for Patchwork Labs. He is currently studying Cyber Operations and Computer Engineering at Cedarville University. With a huge passion for robotics and hardware, you can usually find him either tinkering with a board or fixing up his homelab. Solving the little problems in life is his passion, which leads to many a weekend project.",
     ],
+  },
+    {
+    name: "Dominic Petrarca",
+    role: "Board Member",
+    patchColor: "bg-violet-soft",
+    photo: "/team/dominic-headshot.jpg",
+    bio: ["Full bio coming soon."],
   },
   {
     name: "Adam Sidwa",
@@ -55,14 +62,7 @@ const team: TeamMember[] = [
       "Adam is an avid scout, backpacking for 21 days at Philmont and attending National Jamboree this summer. He’s also an avid sailor, on the water since he was 6 and founder of his school’s sailing team.",
       "When he’s not scouting, sailing, or at school, he’s working on personal projects: developing his combat robot, building a SaaS app, and running Project Ganymede. He’s heading into his junior year at Fairfield Warde High School.",
     ],
-  },
-  {
-    name: "Dom",
-    role: "Board Member",
-    patchColor: "bg-violet-soft",
-    photo: "/team/dominic-headshot.jpg",
-    bio: ["Full bio coming soon."],
-  },
+  }
 ];
 
 function initials(name: string) {
