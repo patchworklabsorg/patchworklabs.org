@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const collected = [
   {
     title: "Email",
-    body: "When you email us for a Slack invite, a question, a donation, or a project pitch, we keep your name, address, and what you wrote so we can reply and follow through.",
+    body: "When you email us with a question, a donation, or a project pitch, we keep your name, address, and what you wrote so we can reply and follow through.",
     className: "bg-grape-soft patch-tilt-l",
   },
   {
@@ -50,7 +50,9 @@ export default function Privacy() {
           and you can email us any time to see or delete what we have. Here is
           the longer version, in plain English.
         </p>
-        <p className="mt-4 text-sm text-ink-soft">Last updated July 22, 2026.</p>
+        <p className="mt-4 text-sm text-ink-soft">
+          Last updated July 22, 2026.
+        </p>
       </section>
 
       {/* This website */}
@@ -96,12 +98,10 @@ export default function Privacy() {
 
       {/* Minors */}
       <section className="py-8">
-        <h2 className="font-display text-3xl font-bold">
-          Members under 18
-        </h2>
+        <h2 className="font-display text-3xl font-bold">Members under 18</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Many of our members are minors, and we take that seriously. We
-          collect only what a program needs, and nothing here is ever used for
+          Many of our members are minors, and we take that seriously. We collect
+          only what a program needs, and nothing here is ever used for
           advertising. If you&rsquo;re a parent or guardian, you can email us
           any time to see what we have about your kid, or ask us to delete it.
         </p>
@@ -109,7 +109,9 @@ export default function Privacy() {
 
       {/* Your choices */}
       <section className="py-8 pb-16">
-        <h2 className="font-display text-3xl font-bold">Questions and requests</h2>
+        <h2 className="font-display text-3xl font-bold">
+          Questions and requests
+        </h2>
         <div className="patch mt-8 max-w-2xl bg-orchid-soft p-6 sm:p-8">
           <p className="text-ink-soft">
             Want to see what we have about you, fix something, or have it
@@ -124,8 +126,8 @@ export default function Privacy() {
             volunteers, but we answer.
           </p>
           <p className="mt-4 text-ink-soft">
-            If this policy changes, we&rsquo;ll update this page and the date
-            at the top. Big changes get announced in the Slack.
+            If this policy changes, we&rsquo;ll update this page and the date at
+            the top. Big changes get announced in the Slack.
           </p>
         </div>
       </section>

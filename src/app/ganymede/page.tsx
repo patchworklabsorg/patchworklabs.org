@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Link } from "next-view-transitions";
-import { GANYMEDE_EMAIL, SLACK_EMAIL, SLACK_URL } from "@/lib/site";
+import { GANYMEDE_EMAIL, SLACK_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Project Ganymede",
@@ -85,8 +85,8 @@ export default function Ganymede() {
           Project Ganymede
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-ink-soft">
-          Serious compute for anyone locked out of institutional resources.
-          All it takes is a good idea and the drive to build it.
+          Serious compute for anyone locked out of institutional resources. All
+          it takes is a good idea and the drive to build it.
         </p>
         <div className="patch mt-8 inline-block bg-orchid-soft px-4 py-2 text-sm font-medium">
           Current status: early stages, pilot underway
@@ -99,15 +99,14 @@ export default function Ganymede() {
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           High-performance compute is abundant for university researchers and
           industry, but almost entirely out of reach for everyone else,
-          especially high schoolers. Nearly every existing research
-          opportunity for pre-college students runs through a university:
-          programs like MIT PRIMES, NYU ARISE, and Clark Scholars pair
-          students with faculty mentors on campus. That model works well for
-          the students who get in, but it&rsquo;s constrained by the number of
-          faculty and often requires relocating near the university for the
-          summer. Students without a research university nearby, or without
-          the profile to win one of a few dozen national seats, are largely
-          locked out.
+          especially high schoolers. Nearly every existing research opportunity
+          for pre-college students runs through a university: programs like MIT
+          PRIMES, NYU ARISE, and Clark Scholars pair students with faculty
+          mentors on campus. That model works well for the students who get in,
+          but it&rsquo;s constrained by the number of faculty and often requires
+          relocating near the university for the summer. Students without a
+          research university nearby, or without the profile to win one of a few
+          dozen national seats, are largely locked out.
         </p>
       </section>
 
@@ -130,8 +129,8 @@ export default function Ganymede() {
           Why we think it works
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Access to real compute leads to a real project, and a finished
-          project produces one of two outcomes:
+          Access to real compute leads to a real project, and a finished project
+          produces one of two outcomes:
         </p>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
           <div className="patch bg-grape-soft p-6 patch-tilt-l">
@@ -139,8 +138,7 @@ export default function Ganymede() {
               The innovation case
             </h3>
             <p className="mt-2 text-ink-soft">
-              A genuinely novel result: a working model, a dataset, a
-              technique.
+              A genuinely novel result: a working model, a dataset, a technique.
             </p>
           </div>
           <div className="patch bg-teal-soft p-6 patch-tilt-r">
@@ -148,16 +146,16 @@ export default function Ganymede() {
               The learning case
             </h3>
             <p className="mt-2 text-ink-soft">
-              Deep, hands-on technical skill and confidence, even if the
-              project doesn&rsquo;t pan out.
+              Deep, hands-on technical skill and confidence, even if the project
+              doesn&rsquo;t pan out.
             </p>
           </div>
         </div>
         <p className="mt-6 max-w-2xl text-lg text-ink-soft">
-          Both outcomes compound. Completed projects become public
-          proof-of-work students can point to for college applications,
-          portfolios, and future research. Every open-sourced result adds to a
-          growing public library other students can build on.
+          Both outcomes compound. Completed projects become public proof-of-work
+          students can point to for college applications, portfolios, and future
+          research. Every open-sourced result adds to a growing public library
+          other students can build on.
         </p>
       </section>
 
@@ -170,23 +168,22 @@ export default function Ganymede() {
           <p>
             In Greek mythology, Ganymede was a mortal youth, a shepherd rather
             than a noble by birth or institution, whose exceptional promise
-            caught
-            Zeus&rsquo;s attention. He was taken up to Olympus and given a
-            permanent place among the gods as their cupbearer: access to a
+            caught Zeus&rsquo;s attention. He was taken up to Olympus and given
+            a permanent place among the gods as their cupbearer: access to a
             world he had no formal path into otherwise.
           </p>
           <p>
             A student doesn&rsquo;t need to attend the right university or win
             one of a handful of national seats. They need a good idea and the
             drive to see it through. Ganymede provides real compute, real
-            infrastructure, and a seat at a table they couldn&rsquo;t
-            otherwise reach.
+            infrastructure, and a seat at a table they couldn&rsquo;t otherwise
+            reach.
           </p>
           <p>
             Fittingly, Ganymede is also the largest moon in the solar system,
             bigger than the planet Mercury. A nod to the scale of potential we
-            think is sitting untapped in students who&rsquo;ve simply never
-            been given the resources to show what they can do.
+            think is sitting untapped in students who&rsquo;ve simply never been
+            given the resources to show what they can do.
           </p>
         </div>
       </section>
@@ -196,14 +193,13 @@ export default function Ganymede() {
         <h2 className="font-display text-3xl font-bold">Who it&rsquo;s for</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Students work independently or in small, self-organized groups. Our
-          priority audience is high school students, who
-          currently have almost no access to programs like this. Minimum age is
-          13. As the program grows, we plan to open up to anyone without access
-          to university-level resources: community college students,
-          self-taught learners, and others outside traditional academic
-          pipelines. Access is equal and merit-based: every applicant is
-          evaluated on the same criteria, and nothing matters beyond the
-          quality of the project.
+          priority audience is high school students, who currently have almost
+          no access to programs like this. Minimum age is 13. As the program
+          grows, we plan to open up to anyone without access to university-level
+          resources: community college students, self-taught learners, and
+          others outside traditional academic pipelines. Access is equal and
+          merit-based: every applicant is evaluated on the same criteria, and
+          nothing matters beyond the quality of the project.
         </p>
       </section>
 
@@ -266,8 +262,8 @@ export default function Ganymede() {
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Ganymede students are part of the wider Patchwork Labs Slack
           community, where they can get help from peers working on their own
-          projects. We&rsquo;re also building out a network of mentor
-          volunteers to provide guidance beyond peer support.
+          projects. We&rsquo;re also building out a network of mentor volunteers
+          to provide guidance beyond peer support.
         </p>
       </section>
 
@@ -277,8 +273,8 @@ export default function Ganymede() {
           <h2 className="font-display text-2xl font-bold">Compute</h2>
           <p className="mt-3 text-ink-soft">
             Ganymede currently runs on compute sourced opportunistically from
-            cloud providers. The target: self-hosted servers, built from
-            in-kind hardware donations.
+            cloud providers. The target: self-hosted servers, built from in-kind
+            hardware donations.
           </p>
         </div>
         <div className="patch bg-violet-soft p-6 patch-tilt-r">
@@ -320,9 +316,9 @@ export default function Ganymede() {
           <div className="patch bg-grape-soft p-6 patch-tilt-l">
             <h3 className="font-display text-xl font-bold">Students</h3>
             <p className="mt-3 text-ink-soft">
-              Our pilot is currently invite-only, but the best way to
-              introduce yourself is to join the Patchwork Labs Slack
-              community, or email your project pitch straight to{" "}
+              Our pilot is currently invite-only, but the best way to introduce
+              yourself is to join the Patchwork Labs Slack community, or email
+              your project pitch straight to{" "}
               <a
                 href={`mailto:${GANYMEDE_EMAIL}`}
                 className="font-medium text-grape hover:underline"
@@ -338,14 +334,15 @@ export default function Ganymede() {
               Join our Slack →
             </a>
             <p className="mt-3 text-sm text-ink-soft">
-              For now, email{" "}
-              <a
-                href={SLACK_URL}
+              Make a Patchwork Labs account, accept the Slack invite, and accept
+              our{" "}
+              <Link
+                href="/conduct"
                 className="font-medium text-grape hover:underline"
               >
-                {SLACK_EMAIL}
-              </a>{" "}
-              for an invite. A smoother flow is coming soon.
+                code of conduct
+              </Link>
+              . That&rsquo;s it.
             </p>
           </div>
           <div className="patch bg-teal-soft p-6 patch-tilt-r">
@@ -353,12 +350,12 @@ export default function Ganymede() {
               Companies &amp; partners
             </h3>
             <p className="mt-3 text-ink-soft">
-              We&rsquo;re seeking in-kind donations of GPUs, servers,
-              networking equipment, and storage. Retired clusters and
-              engineering samples are very much included. We&rsquo;d rather give
-              your hardware a home doing real science than see it go to a
-              reseller or recycler, and as a registered 501(c)(3) we can
-              provide tax documentation for donations.
+              We&rsquo;re seeking in-kind donations of GPUs, servers, networking
+              equipment, and storage. Retired clusters and engineering samples
+              are very much included. We&rsquo;d rather give your hardware a
+              home doing real science than see it go to a reseller or recycler,
+              and as a registered 501(c)(3) we can provide tax documentation for
+              donations.
             </p>
             <a
               href={`mailto:${GANYMEDE_EMAIL}`}
