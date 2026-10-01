@@ -21,8 +21,8 @@ export default function Home() {
             A community of makers, stitched together from around the world.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-ink-soft">
-            We believe innovation isn&rsquo;t a function of age, institution, or
-            pedigree. It&rsquo;s a function of curiosity and tenacity.
+            We believe innovation isn&rsquo;t a function of age, institution,
+            or pedigree. It&rsquo;s a function of curiosity and tenacity.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
@@ -55,8 +55,8 @@ export default function Home() {
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Patchwork Labs was founded in 2025 by Jasper Mayone to make making
           accessible and break down the barriers that keep you from finishing
-          your next project. Be that grants for hardware, access to compute, or
-          an amazing community of people, we&rsquo;ve got you :)
+          your next project. Be that grants for hardware, access to compute,
+          or an amazing community of people, we&rsquo;ve got you :)
         </p>
       </section>
 
@@ -109,7 +109,8 @@ export default function Home() {
           Join our Slack →
         </a>
         <p className="mt-3 text-sm text-ink-soft">
-          Make a Patchwork Labs account, accept the Slack invite, and accept our{" "}
+          Make a Patchwork Labs account, accept the Slack invite, and accept
+          our{" "}
           <Link
             href="/conduct"
             className="font-medium text-grape hover:underline"
@@ -119,6 +120,7 @@ export default function Home() {
           . That&rsquo;s it.
         </p>
       </section>
+
     </div>
   );
 }
