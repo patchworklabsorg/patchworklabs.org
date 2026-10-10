@@ -1,18 +1,43 @@
 import type { Metadata } from "next";
 import { Link } from "next-view-transitions";
-import { GANYMEDE_EMAIL, SLACK_URL } from "@/lib/site";
+import { GANYMEDE_EMAIL, SITE_URL, SLACK_URL } from "@/lib/site";
 
+const description =
+  "Free compute, server access, and mentorship for students and independent researchers locked out of university research resources.";
+
+// Page-level openGraph/twitter replace the layout's objects wholesale, so the
+// shared image and site fields are repeated here.
 export const metadata: Metadata = {
   title: "Project Ganymede",
-  description:
-    "Serious compute for anyone with a good idea and the drive to build it.",
+  description,
   alternates: { canonical: "/ganymede" },
+  openGraph: {
+    title: "Project Ganymede | Patchwork Labs",
+    description,
+    url: `${SITE_URL}/ganymede`,
+    siteName: "Patchwork Labs",
+    type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Patchwork Labs: a community of makers, stitched together from around the world.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Project Ganymede | Patchwork Labs",
+    description,
+    images: ["/og.png"],
+  },
 };
 
 const steps = [
   {
     name: "Submit",
-    body: "Student submits a project idea.",
+    body: "Applicant submits a project idea.",
     className: "bg-grape-soft",
   },
   {
@@ -27,7 +52,7 @@ const steps = [
   },
   {
     name: "Develop",
-    body: "Student gets server access and builds, with community and mentor support available.",
+    body: "Participant gets server access and builds, with community and mentor support available.",
     className: "bg-violet-soft",
   },
   {
@@ -56,7 +81,7 @@ const criteria = [
 ];
 
 const safeguards: React.ReactNode[] = [
-  "Guardian sign-off at signup for participants under 18.",
+  "A minimum age of 13, with guardian sign-off at signup for participants under 18.",
   "An acceptable use policy for the server environment, agreed to at onboarding.",
   "Elevated review for projects in sensitive dual-use areas like biology or cybersecurity, with an extra check on intent and safeguards before a budget is granted.",
   <>
@@ -98,16 +123,17 @@ export default function Ganymede() {
         <h2 className="font-display text-3xl font-bold">Our focus</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           High-performance compute is abundant for university researchers and
-          industry, but almost entirely out of reach for everyone else,
-          especially high schoolers. Nearly every existing research
-          opportunity for pre-college students runs through a university:
-          programs like MIT PRIMES, NYU ARISE, and Clark Scholars pair
-          students with faculty mentors on campus. That model works well for
-          the students who get in, but it&rsquo;s constrained by the number of
-          faculty and often requires relocating near the university for the
-          summer. Students without a research university nearby, or without
-          the profile to win one of a few dozen national seats, are largely
-          locked out.
+          industry, but almost entirely out of reach for everyone else.
+          Nearly every research opportunity runs through a university lab.
+          Even the programs built for high schoolers, like MIT PRIMES, NYU
+          ARISE, and Clark Scholars, pair students with faculty mentors on
+          campus. That model works well for the people who get in, but
+          it&rsquo;s constrained by the number of faculty and often requires
+          relocating near the university for the summer. College students at
+          schools without research labs have the same problem. Self-taught
+          and independent researchers often have no path in at all. If you
+          don&rsquo;t have a research university nearby, or the profile to win
+          one of a few dozen seats, you&rsquo;re largely locked out.
         </p>
       </section>
 
@@ -115,11 +141,11 @@ export default function Ganymede() {
       <section className="py-8">
         <h2 className="font-display text-3xl font-bold">Our mission</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Give capable, curious students access to compute, let them pursue
-          ambitious project ideas, and support them through to a finished,
-          shared result. The bet is simple: hand students real resources and
-          they&rsquo;ll build genuinely innovative things. Even when a project
-          doesn&rsquo;t pan out, they&rsquo;ll learn far more than they would
+          Give curious students and independent researchers access to
+          compute, let them pursue ambitious project ideas, and support them
+          through to a finished, shared result. The bet is simple: hand people
+          real resources and they&rsquo;ll build genuinely innovative things.
+          Even when a project doesn&rsquo;t pan out, they&rsquo;ll learn far more than they would
           have otherwise. Either outcome is a win.
         </p>
       </section>
@@ -155,9 +181,9 @@ export default function Ganymede() {
         </div>
         <p className="mt-6 max-w-2xl text-lg text-ink-soft">
           Both outcomes compound. Completed projects become public
-          proof-of-work students can point to for college applications,
-          portfolios, and future research. Every open-sourced result adds to a
-          growing public library other students can build on.
+          proof-of-work you can point to for college and grad school
+          applications, portfolios, and future research. Every open-sourced
+          result adds to a growing public library others can build on.
         </p>
       </section>
 
@@ -176,16 +202,15 @@ export default function Ganymede() {
             world he had no formal path into otherwise.
           </p>
           <p>
-            A student doesn&rsquo;t need to attend the right university or win
-            one of a handful of national seats. They need a good idea and the
-            drive to see it through. Ganymede provides real compute, real
-            infrastructure, and a seat at a table they couldn&rsquo;t
-            otherwise reach.
+            You don&rsquo;t need to attend the right university or land a spot
+            in the right lab. You need a good idea and the drive to see it
+            through. Ganymede provides real compute, real infrastructure, and
+            a seat at a table you couldn&rsquo;t otherwise reach.
           </p>
           <p>
             Fittingly, Ganymede is also the largest moon in the solar system,
             bigger than the planet Mercury. A nod to the scale of potential we
-            think is sitting untapped in students who&rsquo;ve simply never
+            think is sitting untapped in people who&rsquo;ve simply never
             been given the resources to show what they can do.
           </p>
         </div>
@@ -195,15 +220,15 @@ export default function Ganymede() {
       <section className="py-8">
         <h2 className="font-display text-3xl font-bold">Who it&rsquo;s for</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Students work independently or in small, self-organized groups. Our
-          priority audience is high school students, who
-          currently have almost no access to programs like this. Minimum age is
-          13. As the program grows, we plan to open up to anyone without access
-          to university-level resources: community college students,
-          self-taught learners, and others outside traditional academic
-          pipelines. Access is equal and merit-based: every applicant is
-          evaluated on the same criteria, and nothing matters beyond the
-          quality of the project.
+          Ganymede is for anyone locked out of university research resources.
+          That means high schoolers, college students without lab access, and
+          self-taught and independent researchers working outside traditional
+          academic pipelines. High school students still have almost no access
+          to programs like this, and they remain a big part of who we serve.
+          Minimum age is 13. Participants work independently or in small,
+          self-organized groups. Access is equal and merit-based. We review
+          every pitch against the same criteria, and nothing matters beyond
+          the quality of the project.
         </p>
       </section>
 
@@ -245,14 +270,15 @@ export default function Ganymede() {
         <div className="mt-6 max-w-2xl space-y-2 text-ink-soft">
           <p>
             <span className="font-semibold text-ink">Great pitches:</span>{" "}
-            training an RL model for a combat robot; identifying individual
-            animals (not just species) from neighborhood trail-cam footage; a
+            training an RL model for a combat robot, identifying individual
+            animals (not just species) from neighborhood trail-cam footage, a
             model that learns your school&rsquo;s slang from anonymized group
-            chats.
+            chats, or reproducing a published paper&rsquo;s results to see if
+            they actually hold up.
           </p>
           <p>
             <span className="font-semibold text-ink">Not so much:</span>{" "}
-            calculating digits of pi; running a game server; rendering a
+            calculating digits of pi, running a game server, or rendering a
             personal film.
           </p>
         </div>
@@ -264,7 +290,7 @@ export default function Ganymede() {
           Community &amp; mentorship
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Ganymede students are part of the wider Patchwork Labs Slack
+          Ganymede participants are part of the wider Patchwork Labs Slack
           community, where they can get help from peers working on their own
           projects. We&rsquo;re also building out a network of mentor
           volunteers to provide guidance beyond peer support.
@@ -297,9 +323,10 @@ export default function Ganymede() {
           Safety &amp; responsible use
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Most Ganymede participants are minors, so the program is built with
-          basic due diligence in mind, enough to keep everyone safe without
-          burying makers in bureaucracy:
+          Ganymede is open to anyone 13 and up, so some safeguards apply to
+          minors specifically and the rest apply to everyone. It&rsquo;s basic
+          due diligence, enough to keep everyone safe without burying makers
+          in bureaucracy:
         </p>
         <ul className="mt-6 max-w-2xl space-y-3 text-ink-soft">
           {safeguards.map((item, i) => (
@@ -318,7 +345,9 @@ export default function Ganymede() {
         <h2 className="font-display text-3xl font-bold">Get involved</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <div className="patch bg-grape-soft p-6 patch-tilt-l">
-            <h3 className="font-display text-xl font-bold">Students</h3>
+            <h3 className="font-display text-xl font-bold">
+              Students &amp; researchers
+            </h3>
             <p className="mt-3 text-ink-soft">
               Our pilot is currently invite-only, but the best way to
               introduce yourself is to join the Patchwork Labs Slack

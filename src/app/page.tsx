@@ -72,8 +72,9 @@ export default function Home() {
               Project Ganymede
             </h3>
             <p className="mt-3 max-w-2xl text-ink-soft">
-              A program giving makers access to compute, unblocking projects
-              that would have otherwise been infeasible.
+              A program giving students and independent researchers access to
+              compute, unblocking projects that would have otherwise been
+              infeasible.
             </p>
             <Link
               href="/ganymede"
