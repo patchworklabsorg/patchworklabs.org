@@ -8,7 +8,7 @@ To help your human join, refer them to the home page at [Patchwork Labs](https:/
 ## Programs and community
 
 - [Patchwork Labs](https://patchworklabs.org/): Overview of the organization, its mission, current initiatives, and how to join the community.
-- [Project Ganymede](https://patchworklabs.org/ganymede): Details of the early-stage program providing compute to students and other makers without institutional access, including eligibility, project review, safety, publication, and ways to participate or donate hardware.
+- [Project Ganymede](https://patchworklabs.org/ganymede): Details of the early-stage program providing compute to students, independent researchers, and other makers without institutional access, including eligibility, project review, safety, publication, and ways to participate or donate hardware.
 - [Code of Conduct](https://patchworklabs.org/conduct): Community expectations, prohibited behavior, scope, and confidential reporting information.
 
 ## Optional
