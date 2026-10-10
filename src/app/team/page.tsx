@@ -29,7 +29,7 @@ const team: TeamMember[] = [
     patchColor: "bg-grape-soft",
     photo: "/team/jasper-card.jpg",
     bio: [
-      "Jasper is the Founder & Operations Director of Patchwork Labs, a nonprofit built to bring creativity back into the world and support the next generation of makers.",
+      "Jasper is the Founder & Director of Programs at Patchwork.",
       "A computer science major at Wentworth Institute of Technology in Boston, Jasper is an organizer and big-picture thinker who’s happiest turning ideas into real projects. That instinct is what led them to start Patchwork Labs, where they steer both the mission and the day-to-day operations.",
       "Jasper is also a passionate advocate for a safer internet, contributing to open source projects focused on web security and privacy. Among them is phish.directory, a free and open source phishing directory, where Jasper serves as lead maintainer.",
       "When they’re not building something, you’ll find Jasper reading, out in the great outdoors, taking photos, cooking, or programming for fun.",
