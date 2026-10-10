@@ -42,7 +42,8 @@ const team: TeamMember[] = [
     patchColor: "bg-teal-soft",
     photo: "/team/kieran-v2.png",
     bio: [
-      "Kieran is the Secretary for Patchwork Labs. He is currently studying Cyber Operations and Computer Engineering at Cedarville University. With a huge passion for robotics and hardware, you can usually find him either tinkering with a board or fixing up his homelab. Solving the little problems in life is his passion, which leads to many a weekend project.",
+      "Kieran is the Board Secretary for Patchwork.",
+      "He is currently studying Cyber Operations and Computer Engineering at Cedarville University. With a huge passion for robotics and hardware, you can usually find him either tinkering with a board or fixing up his homelab. Solving the little problems in life is his passion, which leads to many a weekend project.",
     ],
   },
     {
