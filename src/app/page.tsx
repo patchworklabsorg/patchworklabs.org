@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
-import { SLACK_EMAIL, SLACK_URL } from "@/lib/site";
+import { SLACK_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -109,14 +109,15 @@ export default function Home() {
           Join our Slack →
         </a>
         <p className="mt-3 text-sm text-ink-soft">
-          For now, email{" "}
-          <a
-            href={SLACK_URL}
+          Make a Patchwork Labs account, accept the Slack invite, and accept
+          our{" "}
+          <Link
+            href="/conduct"
             className="font-medium text-grape hover:underline"
           >
-            {SLACK_EMAIL}
-          </a>{" "}
-          for an invite. A smoother flow is coming soon.
+            code of conduct
+          </Link>
+          . That&rsquo;s it.
         </p>
       </section>
 

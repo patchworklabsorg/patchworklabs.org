@@ -1,8 +1,7 @@
 // Central place for links/contact info used across the site.
-// Slack invites are handled over email for now — swap SLACK_URL for a real
-// invite link once the better flow lands.
-export const SLACK_EMAIL = "slack@patchworklabs.org";
-export const SLACK_URL = `mailto:${SLACK_EMAIL}?subject=Slack%20invite`;
+// Joining the Slack goes through Weave, our account system: this address
+// redirects to the onboarding page, which walks people through each step.
+export const SLACK_URL = "https://slack.patchworklabs.org";
 export const CONTACT_EMAIL = "team@patchworklabs.org";
 // Financial contributions and project collaborations go straight to Jasper.
 export const DONATE_EMAIL = "jasper@patchworklabs.org";

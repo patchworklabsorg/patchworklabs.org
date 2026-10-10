@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const collected = [
   {
     title: "Email",
-    body: "When you email us for a Slack invite, a question, a donation, or a project pitch, we keep your name, address, and what you wrote so we can reply and follow through.",
+    body: "When you email us with a question, a donation, or a project pitch, we keep your name, address, and what you wrote so we can reply and follow through.",
     className: "bg-grape-soft patch-tilt-l",
   },
   {

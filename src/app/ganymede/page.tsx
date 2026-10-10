@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Link } from "next-view-transitions";
-import { GANYMEDE_EMAIL, SLACK_EMAIL, SLACK_URL } from "@/lib/site";
+import { GANYMEDE_EMAIL, SLACK_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Project Ganymede",
@@ -338,14 +338,15 @@ export default function Ganymede() {
               Join our Slack →
             </a>
             <p className="mt-3 text-sm text-ink-soft">
-              For now, email{" "}
-              <a
-                href={SLACK_URL}
+              Make a Patchwork Labs account, accept the Slack invite, and accept
+              our{" "}
+              <Link
+                href="/conduct"
                 className="font-medium text-grape hover:underline"
               >
-                {SLACK_EMAIL}
-              </a>{" "}
-              for an invite. A smoother flow is coming soon.
+                code of conduct
+              </Link>
+              . That&rsquo;s it.
             </p>
           </div>
           <div className="patch bg-teal-soft p-6 patch-tilt-r">
