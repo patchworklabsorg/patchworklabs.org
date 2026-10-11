@@ -19,8 +19,8 @@ type TeamMember = {
   photo?: string;
 };
 
-// TODO: Dom — need full name + bio. YC (Infrastructure Lead) removed for
-// now — re-add once there's a name and bio.
+// TODO: YC (Infrastructure Lead) removed for now — re-add once there's a
+// name and bio.
 const team: TeamMember[] = [
   {
     name: "Jasper Mayone",
@@ -46,15 +46,21 @@ const team: TeamMember[] = [
       "He is currently studying Cyber Operations and Computer Engineering at Cedarville University. With a huge passion for robotics and hardware, you can usually find him either tinkering with a board or fixing up his homelab. Solving the little problems in life is his passion, which leads to many a weekend project.",
     ],
   },
-    {
+  {
     name: "Dominic Petrarca",
+    pronouns: "he/him",
     role: "Board Member",
     patchColor: "bg-violet-soft",
     photo: "/team/dominic-headshot.jpg",
-    bio: ["Full bio coming soon."],
+    bio: [
+      "Dominic is a Board Member at Patchwork.",
+      "A young entrepreneur with an interest in design and engineering, Dominic is taking a gap year to get broader experience before going on to college and a career.",
+      "Outside of work, you can usually find Dominic at the gym or at home making something, whether that’s a CAD model, music, or a graphic design project.",
+    ],
   },
   {
     name: "Adam Sidwa",
+    pronouns: "he/him",
     role: "Project Ganymede Administrator",
     email: "adam.sidwa@patchworklabs.org",
     patchColor: "bg-orchid-soft",
