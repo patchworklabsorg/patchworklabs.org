@@ -20,6 +20,11 @@ const collected = [
     className: "bg-teal-soft patch-tilt-r",
   },
   {
+    title: "Your Weave account",
+    body: "Weave is our sign-in for the Slack and our apps. It keeps your name, email address, birthday and profile, and the groups and apps you use. We ask for your birthday because members must be 13 or older, and members under 18 need consent from a parent or guardian.",
+    className: "bg-orchid-soft patch-tilt-l",
+  },
+  {
     title: "Project Ganymede",
     body: "To give you access to compute we ask for your name, email, and what you're building. Shared infrastructure keeps usage logs so we can keep it healthy and fairly shared.",
     className: "bg-sky-soft patch-tilt-r",
@@ -38,6 +43,12 @@ const promises = [
   "We only ask for what a program actually needs to work.",
 ];
 
+const guardianRetention = [
+  "We keep a consent while the member has an account, and for 1 year after the account is deleted. Then we delete it.",
+  "If a parent or guardian does not answer, we delete their name and email address 30 days after the link expires.",
+  "A parent or guardian can take their consent back at any time from the link in their email.",
+];
+
 export default function Privacy() {
   return (
     <div className="mx-auto w-full max-w-4xl px-6">
@@ -50,7 +61,7 @@ export default function Privacy() {
           and you can email us any time to see or delete what we have. Here is
           the longer version, in plain English.
         </p>
-        <p className="mt-4 text-sm text-ink-soft">Last updated July 22, 2026.</p>
+        <p className="mt-4 text-sm text-ink-soft">Last updated October 12, 2026.</p>
       </section>
 
       {/* This website */}
@@ -105,6 +116,24 @@ export default function Privacy() {
           advertising. If you&rsquo;re a parent or guardian, you can email us
           any time to see what we have about your kid, or ask us to delete it.
         </p>
+        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
+          Members under 18 need consent from a parent or guardian before they
+          join the Slack or use our apps. We email the parent or guardian a
+          link. When they give consent, we keep their name, email address and
+          typed signature, encrypted. We also keep the time, their IP address,
+          their browser and an identifier for their device, and use these only
+          to check that the consent is real.
+        </p>
+        <ul className="mt-6 max-w-2xl space-y-3 text-ink-soft">
+          {guardianRetention.map((item) => (
+            <li key={item} className="flex gap-3">
+              <span aria-hidden className="select-none text-grape">
+                ✦
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* Your choices */}
