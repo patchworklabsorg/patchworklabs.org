@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Link } from "next-view-transitions";
-import { GANYMEDE_EMAIL, SITE_URL, SLACK_URL } from "@/lib/site";
+import {
+  DATA_PAGE_PATH,
+  GANYMEDE_EMAIL,
+  SITE_URL,
+  SLACK_URL,
+} from "@/lib/site";
 
 const description =
   "Free compute, server access, and mentorship for students and independent researchers locked out of university research resources.";
@@ -82,6 +87,17 @@ const criteria = [
 
 const safeguards: React.ReactNode[] = [
   "A minimum age of 13, with guardian sign-off at signup for participants under 18.",
+  <>
+    An ID check with a live video call before you get program resources.
+    The call is never recorded.{" "}
+    <Link
+      href={DATA_PAGE_PATH}
+      className="font-medium text-grape hover:underline"
+    >
+      Here is what we do with your data
+    </Link>
+    .
+  </>,
   "An acceptable use policy for the server environment, agreed to at onboarding.",
   "Elevated review for projects in sensitive dual-use areas like biology or cybersecurity, with an extra check on intent and safeguards before a budget is granted.",
   <>
@@ -230,6 +246,18 @@ export default function Ganymede() {
           every pitch against the same criteria, and nothing matters beyond
           the quality of the project.
         </p>
+        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
+          Before you get compute, servers, or grant money, we check your ID
+          with a short live video call. The call is never recorded. Joining
+          the Slack never needs an ID. See{" "}
+          <Link
+            href={DATA_PAGE_PATH}
+            className="font-medium text-grape hover:underline"
+          >
+            what we do with your data
+          </Link>{" "}
+          for every step, and for what we keep and delete.
+        </p>
       </section>
 
       {/* How it works */}
@@ -376,6 +404,16 @@ export default function Ganymede() {
                 code of conduct
               </Link>
               . That&rsquo;s it.
+            </p>
+            <p className="mt-3 text-sm text-ink-soft">
+              Before you get compute or grant money, we check your ID.{" "}
+              <Link
+                href={DATA_PAGE_PATH}
+                className="font-medium text-grape hover:underline"
+              >
+                Read how the check works
+              </Link>
+              .
             </p>
           </div>
           <div className="patch bg-teal-soft p-6 patch-tilt-r">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { Link } from "next-view-transitions";
+import { CONTACT_EMAIL, DATA_PAGE_PATH } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -26,7 +27,21 @@ const collected = [
   },
   {
     title: "Project Ganymede",
-    body: "To give you access to compute we ask for your name, email, and what you're building. Shared infrastructure keeps usage logs so we can keep it healthy and fairly shared.",
+    body: (
+      <>
+        To give you access to compute we ask for your name, email, and what
+        you&rsquo;re building. Shared infrastructure keeps usage logs so we
+        can keep it healthy and fairly shared. Program resources also need an
+        ID check. Read{" "}
+        <Link
+          href={DATA_PAGE_PATH}
+          className="font-medium text-grape hover:underline"
+        >
+          what we do with your data
+        </Link>{" "}
+        to see how the check works and what we keep.
+      </>
+    ),
     className: "bg-sky-soft patch-tilt-r",
   },
   {
@@ -62,6 +77,22 @@ export default function Privacy() {
           the longer version, in plain English.
         </p>
         <p className="mt-4 text-sm text-ink-soft">Last updated October 12, 2026.</p>
+        <Link
+          href={DATA_PAGE_PATH}
+          className="patch group mt-8 block max-w-2xl bg-teal-soft p-6 transition-transform hover:-translate-y-0.5"
+        >
+          <p className="font-display text-xl font-bold">
+            What we do with your data{" "}
+            <span aria-hidden className="text-teal">
+              →
+            </span>
+          </p>
+          <p className="mt-2 text-ink-soft">
+            The plain-English guide to ID checks, the video call (never
+            recorded), your demographic answers, deleting your account, and
+            the one thing we keep after you leave.
+          </p>
+        </Link>
       </section>
 
       {/* This website */}

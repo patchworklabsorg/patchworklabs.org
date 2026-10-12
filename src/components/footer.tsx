@@ -1,5 +1,10 @@
 import { Link } from "next-view-transitions";
-import { CONTACT_EMAIL, DONATE_EMAIL, SLACK_URL } from "@/lib/site";
+import {
+  CONTACT_EMAIL,
+  DATA_PAGE_PATH,
+  DONATE_EMAIL,
+  SLACK_URL,
+} from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -48,6 +53,12 @@ export default function Footer() {
           </Link>
           <Link href="/privacy" className="hover:text-grape hover:underline">
             Privacy policy
+          </Link>
+          <Link
+            href={DATA_PAGE_PATH}
+            className="hover:text-grape hover:underline"
+          >
+            What we do with your data
           </Link>
           <Link href="/imprint" className="hover:text-grape hover:underline">
             Imprint

@@ -10,3 +10,7 @@ export const GANYMEDE_EMAIL = "ganymede@patchworklabs.org";
 
 export const SITE_NAME = "Patchwork Labs";
 export const SITE_URL = "https://patchworklabs.org";
+
+// "What we do with your data": the public page on ID checks, ID images,
+// demographics, deletion and the Knot. Weave links to the same address.
+export const DATA_PAGE_PATH = "/your-data";
