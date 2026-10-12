@@ -76,8 +76,8 @@ export default function RetentionTimeline() {
       </div>
       <figcaption className="mt-5 text-sm text-ink-soft sm:pl-44">
         <span className="font-semibold text-orchid">Dashed line:</span> you
-        delete your account. Your readable data goes. Only what the law needs,
-        and the Knot, stay. The bars show the order, not real lengths of time.
+        delete your account. Your readable data goes. Only what a law or a funder
+        contract makes us keep, and the Knot, stay. The bars show the order, not real lengths of time.
       </figcaption>
     </figure>
   );

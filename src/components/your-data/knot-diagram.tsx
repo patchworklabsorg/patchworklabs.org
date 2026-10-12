@@ -104,9 +104,10 @@ export default function KnotDiagram() {
           <div className="patch bg-grape-soft p-5">
             <p className="font-display font-bold">A strong match</p>
             <p className="mt-1 text-sm text-ink-soft">
-              It&rsquo;s the same person. Any limit on grants per person still applies. If
-              the flag is &ldquo;no&rdquo;, you just verify again like anyone
-              else.
+              It&rsquo;s the same person. Any limit on grants per person
+              still applies. If the flag is &ldquo;no&rdquo;, you just verify
+              again like anyone else. If the flag is &ldquo;yes&rdquo;, the
+              verification team looks more closely.
             </p>
           </div>
           <div className="patch bg-teal-soft p-5">

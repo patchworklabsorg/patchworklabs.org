@@ -264,7 +264,7 @@ export default function YourData() {
           What we collect, and why
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          This is everything the ID check adds to your account. Every piece
+          This is the data that the ID check and our programs add to your account. Every piece
           has an answer to three questions: can you download it, can you
           delete it, and if not, which rule makes us keep it and for how long.
         </p>

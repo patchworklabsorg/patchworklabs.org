@@ -25,7 +25,7 @@ export default function Placeholder({
   return (
     <mark
       data-placeholder={kind}
-      className="rounded border border-dashed border-orchid bg-orchid-soft px-1 font-mono text-[0.85em] font-semibold text-orchid"
+      className="rounded border border-dashed border-orchid bg-orchid-soft px-1 font-mono text-[0.85em] font-semibold text-ink"
     >
       {label}
     </mark>

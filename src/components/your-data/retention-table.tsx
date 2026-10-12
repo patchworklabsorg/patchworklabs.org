@@ -7,10 +7,10 @@ import Placeholder from "@/components/your-data/placeholder";
 type Outcome = "gone" | "deleted" | "counted" | "kept";
 
 const outcomeStyle: Record<Outcome, string> = {
-  gone: "bg-violet-soft text-grape",
-  deleted: "bg-teal-soft text-teal",
-  counted: "bg-sky-soft text-sky",
-  kept: "bg-orchid-soft text-orchid",
+  gone: "border-violet bg-violet-soft",
+  deleted: "border-teal bg-teal-soft",
+  counted: "border-sky bg-sky-soft",
+  kept: "border-orchid bg-orchid-soft",
 };
 
 const rows: {
@@ -27,7 +27,10 @@ const rows: {
       <>
         We delete them{" "}
         <Placeholder kind="WINDOW">ID images after a pass</Placeholder> after
-        you pass the check, long before you ask to delete anything.
+        you pass the check, so they are usually gone before you ask to delete
+        anything. If you did not pass:{" "}
+        <Placeholder kind="DECISION">ID images when a check does not pass</Placeholder>
+        .
       </>
     ),
   },
@@ -140,7 +143,7 @@ export default function RetentionTable() {
               </th>
               <td className="block pt-2 sm:table-cell sm:px-3 sm:py-3 sm:align-top">
                 <span
-                  className={`inline-block rounded-lg px-2.5 py-0.5 text-sm font-semibold ${
+                  className={`inline-block rounded-lg border px-2.5 py-0.5 text-sm font-semibold text-ink ${
                     outcomeStyle[row.outcome]
                   }`}
                 >

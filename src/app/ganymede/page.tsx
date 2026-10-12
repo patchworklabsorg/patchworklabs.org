@@ -248,7 +248,7 @@ export default function Ganymede() {
         </p>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           Before you get compute, servers, or grant money, we check your ID
-          with a short live video call. The call is never recorded. Joining
+          with a live video call. The call is never recorded. Joining
           the Slack never needs an ID. See{" "}
           <Link
             href={DATA_PAGE_PATH}

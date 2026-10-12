@@ -11,7 +11,7 @@ const steps = [
   },
   {
     title: "Tie off the Knot",
-    body: "We save two things on your Knot: a yes/no flag, and which program grants you got.",
+    body: "We save two things on your Knot: a yes/no flag for whether you are blocked from our programs, and which program grants you got.",
   },
   {
     title: "Cut the thread",

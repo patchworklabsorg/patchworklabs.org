@@ -1,6 +1,6 @@
 // The ID check, in four steps, with its two "go back" paths: a problem with
 // the ID loops back to step 1, and a failed call loops back to step 1 with a
-// different person. Wide screens get the drawn diagram; phones get the same
+// different person. Large screens get the drawn diagram; phones get the same
 // thing as a stacked list, so the text never shrinks below reading size.
 
 const steps = [
@@ -30,7 +30,7 @@ function Wide() {
       viewBox="0 0 850 262"
       role="img"
       aria-label="The ID check in four steps. 1: send your ID. 2: a person checks it. 3: a live video call, which is never recorded. 4: a decision, written down either way. A pass means you are verified. A problem with the ID at step 2 goes back to step 1. A fail at step 4 goes back to step 1 after a wait, with a different person on the call."
-      className="hidden h-auto w-full sm:block"
+      className="hidden h-auto w-full lg:block"
     >
       <defs>
         <marker
@@ -116,14 +116,14 @@ function Wide() {
 
       {/* pass */}
       <path d="M728,110 L768,110" className="stroke-teal" strokeWidth={3} />
-      <rect x={768} y={96} width={78} height={28} rx={14} className="fill-teal" />
+      <rect x={768} y={96} width={78} height={28} rx={14} strokeWidth={2} className="fill-teal-soft stroke-teal" />
       <text
         x={807}
         y={115}
         textAnchor="middle"
         fontSize={13}
         fontWeight={700}
-        className="fill-paper"
+        className="fill-ink"
       >
         verified
       </text>
@@ -142,7 +142,7 @@ function Wide() {
         y={196}
         textAnchor="middle"
         fontSize={13}
-        className="fill-sky"
+        className="fill-ink-soft"
       >
         problem with the ID? fix it and send it again
       </text>
@@ -171,7 +171,7 @@ function Wide() {
 
 function Stacked() {
   return (
-    <ol className="space-y-3 sm:hidden">
+    <ol className="space-y-3 lg:hidden">
       {steps.map((step, i) => (
         <li key={step.title}>
           <div className="flex items-center gap-4">
@@ -195,13 +195,13 @@ function Stacked() {
             </div>
           </div>
           {i === 1 && (
-            <p className="ml-14 mt-2 rounded-lg border-2 border-dashed border-sky px-3 py-2 text-sm text-sky">
+            <p className="ml-14 mt-2 rounded-lg border-2 border-dashed border-sky px-3 py-2 text-sm text-ink-soft">
               ← Problem with the ID? Fix it and go back to step 1.
             </p>
           )}
           {i === 3 && (
             <div className="ml-14 mt-2 space-y-2 text-sm">
-              <p className="inline-block rounded-full bg-teal px-3 py-1 font-bold text-paper">
+              <p className="inline-block rounded-full border-2 border-teal bg-teal-soft px-3 py-1 font-bold text-ink">
                 Pass: verified
               </p>
               <p className="rounded-lg border-2 border-dashed border-orchid px-3 py-2 text-orchid">
