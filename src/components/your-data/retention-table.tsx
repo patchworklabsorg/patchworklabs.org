@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import Placeholder from "@/components/your-data/placeholder";
 
 // "What delete actually deletes": nine kinds of data, and what happens to
 // each one when you delete your account. Rows stack into cards on phones.
@@ -26,9 +25,8 @@ const rows: {
     why: (
       <>
         We delete them 7 days after you pass the check, so they are usually gone before you ask to delete
-        anything. If you did not pass:{" "}
-        <Placeholder kind="DECISION">ID images when a check does not pass</Placeholder>
-        .
+        anything. If you did not pass, or we asked you for a new photo, we delete them 30 days after that
+        check ends.
       </>
     ),
   },
@@ -99,8 +97,8 @@ const rows: {
     why: (
       <>
         A one-way fingerprint, a yes/no flag, and the grants you got. It does
-        not hold your name. Kept for{" "}
-        <Placeholder kind="DECISION">how long the Knot is kept</Placeholder>.
+        not hold your name. Kept for ever, with no end date: the one-grant-per-program limit and the block
+        flag both depend on it, and a block flag never fades.
       </>
     ),
   },

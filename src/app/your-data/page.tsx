@@ -255,6 +255,16 @@ export default function YourData() {
             "Every try is written down and linked to the one before it, so if you disagree with a result, we can look at what really happened.",
           ]}
         />
+
+        <h3 className="font-display mt-10 text-2xl font-bold">
+          How long a pass lasts
+        </h3>
+        <Bullets
+          items={[
+            "A pass has no time limit. You don’t check again every year.",
+            "We ask for a new check only if your birthday or your legal name changes on your account, or after we review a block flag on your record. We tell you why.",
+          ]}
+        />
       </section>
 
       {/* What we collect */}
@@ -291,7 +301,7 @@ export default function YourData() {
         </p>
         <Bullets
           items={[
-            "A parent or guardian can be on the video call with you.",
+            "A parent or guardian must be on the video call with you. You can’t pass the check without them.",
             "We keep the guardian contact until you turn 18 or leave the program. When you delete your account, we delete it.",
             <>
               Parents and guardians can email{" "}
@@ -360,9 +370,8 @@ export default function YourData() {
         <h2 className="font-display text-3xl font-bold">Your ID images</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           We delete your ID images 7 days after you pass. If you don&rsquo;t
-          pass,{" "}
-          <Placeholder kind="DECISION">ID images when a check does not pass</Placeholder>
-          . Until then, they are locked away. The one person who checks your ID
+          pass, or we ask you for a new photo, we delete them 30 days after
+          that check ends. Until then, they are locked away. The one person who checks your ID
           before the call can see it only until that check ends, and every
           look is logged. Then we seal it, and only two of our three key
           holders together can open it.
@@ -395,8 +404,9 @@ export default function YourData() {
             <h3 className="font-display mt-1 text-lg font-bold">are told</h3>
             <p className="mt-2 text-sm text-ink-soft">
               We tell you within 72 hours. The only exception is an active
-              fraud investigation. Then a second person must agree to the
-              wait, and we still tell you at most 30 days later.
+              fraud investigation. Then an owner or our verification team lead
+              must agree to the wait (never the person who asked for it), and
+              we still tell you at most 30 days later.
             </p>
           </div>
         </div>
