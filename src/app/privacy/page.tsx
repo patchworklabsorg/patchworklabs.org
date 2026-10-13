@@ -59,7 +59,7 @@ const promises = [
 ];
 
 const guardianRetention = [
-  "We keep a consent while the member has an account, and for 1 year after the account is deleted. Then we delete it.",
+  "We keep a consent and the parent or guardian's contact details while the member is under 18 and has an account. When the member turns 18 or deletes their account, we delete them.",
   "If a parent or guardian does not answer, we delete their name and email address 30 days after the link expires.",
   "A parent or guardian can take their consent back at any time from the link in their email.",
 ];

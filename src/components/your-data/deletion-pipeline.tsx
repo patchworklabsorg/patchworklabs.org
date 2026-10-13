@@ -1,4 +1,3 @@
-import Placeholder from "@/components/your-data/placeholder";
 
 // What happens after you ask us to delete your account: one human check,
 // then four steps in a fixed order. Steps 1 and 2 need to know who you are,
@@ -35,8 +34,9 @@ export default function DeletionPipeline() {
         </span>
         <p className="text-ink-soft">
           A person checks that the request really comes from you. That is all
-          they check. They do not decide if you are allowed to leave. We answer
-          within <Placeholder kind="SLA">deletion request review</Placeholder>.
+          they check. They do not decide if you are allowed to leave. They do
+          this check within 14 days, and the deletion is complete within 30
+          days of your request.
         </p>
       </div>
 

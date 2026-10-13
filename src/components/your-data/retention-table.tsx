@@ -25,9 +25,7 @@ const rows: {
     label: "already gone",
     why: (
       <>
-        We delete them{" "}
-        <Placeholder kind="WINDOW">ID images after a pass</Placeholder> after
-        you pass the check, so they are usually gone before you ask to delete
+        We delete them 7 days after you pass the check, so they are usually gone before you ask to delete
         anything. If you did not pass:{" "}
         <Placeholder kind="DECISION">ID images when a check does not pass</Placeholder>
         .
@@ -58,22 +56,22 @@ const rows: {
     label: "kept for a set time",
     why: (
       <>
-        To stop fraud and to follow the law. We keep them for{" "}
-        <Placeholder kind="WINDOW">verification audit records</Placeholder>,
-        then destroy them.
+        To stop fraud and to follow the law. We keep them for 3 years after
+        you delete your account, then destroy them. If you are blocked from
+        our programs for fraud, we keep the evidence while the block stands.
       </>
     ),
   },
   {
     what: "Grant and money records",
     outcome: "kept",
-    label: "kept for a set time",
+    label: "kept, then made anonymous",
     why: (
       <>
         Tax law, audits, and our funders&rsquo; rules make us keep these. We
-        keep them for{" "}
-        <Placeholder kind="WINDOW">financial and grant records</Placeholder>,
-        then destroy them.
+        keep them in full for 7 years, or longer when a funder&rsquo;s
+        contract says so. Then we remove your details. The amount, the
+        program, and the year stay, with no name.
       </>
     ),
   },
@@ -89,9 +87,8 @@ const rows: {
     label: "kept, then added to totals",
     why: (
       <>
-        Only when a funder&rsquo;s contract requires it, and only for{" "}
-        <Placeholder kind="WINDOW">funder-required records</Placeholder>. Then
-        they go into the totals too.
+        Only when a funder&rsquo;s contract requires it, and only for as long
+        as that contract requires. Then they go into the totals too.
       </>
     ),
   },

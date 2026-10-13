@@ -247,12 +247,11 @@ export default function YourData() {
         <Bullets
           items={[
             <>
-              It isn&rsquo;t the end. After a wait of{" "}
-              <Placeholder kind="WINDOW">cooldown before a retry</Placeholder>,
-              you can start again from step 1.
+              It isn&rsquo;t the end. After a wait of 14 days, you can start
+              again from step 1.
             </>,
             "Your next try is always with a different person. No one person can fail you again and again, or pass you again and again.",
-            "If you fail many times, the verification team looks at the whole history together, so you are not stuck in a loop.",
+            "If a second call does not pass, the verification team lead looks at the whole history together, so you are not stuck in a loop.",
             "Every try is written down and linked to the one before it, so if you disagree with a result, we can look at what really happened.",
           ]}
         />
@@ -349,11 +348,9 @@ export default function YourData() {
             "The only thing that comes out of the vault is totals, like “40 members aged 13 to 15”.",
             <>
               If a group is very small, we hide it, so nobody can work out who
-              is in it. A group needs at least{" "}
-              <Placeholder kind="NUMBER">smallest group size we show</Placeholder>{" "}
-              people before we show it.
+              is in it. A group needs at least 10 people before we show it.
             </>,
-            "When you delete your account, your answers are added to the totals as general ranges. Then your encrypted record is destroyed.",
+            "When you delete your account, your answers are added to the totals as general ranges, and your encrypted record is destroyed. Until our next report run, those ranges wait in sealed form with no link to you.",
           ]}
         />
       </section>
@@ -362,12 +359,12 @@ export default function YourData() {
       <section id="id-images" className="scroll-mt-6 py-8">
         <h2 className="font-display text-3xl font-bold">Your ID images</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          We delete your ID images{" "}
-          <Placeholder kind="WINDOW">ID images after a pass</Placeholder> after
-          you pass. If you don&rsquo;t pass,{" "}
+          We delete your ID images 7 days after you pass. If you don&rsquo;t
+          pass,{" "}
           <Placeholder kind="DECISION">ID images when a check does not pass</Placeholder>
-          . Until then, they are locked away and our normal work never touches
-          them.
+          . Until then, they are locked away. The one person who checks your ID
+          before the call looks at it, and every look is logged. Any other
+          access needs two key holders to agree.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           <div className="patch bg-grape-soft p-5 patch-tilt-l">
@@ -386,19 +383,18 @@ export default function YourData() {
               access is logged
             </h3>
             <p className="mt-2 text-sm text-ink-soft">
-              If a key holder opens an image, the other key holder and the
-              verification team lead are told right away. Our board sees every
-              one in its regular report.
+              If anyone opens a stored image, the key holders who approved it
+              and the verification team lead are told right away. Our board
+              sees every one in its regular report.
             </p>
           </div>
           <div className="patch bg-orchid-soft p-5 patch-tilt-r">
             <p className="font-display text-3xl font-bold text-orchid">You</p>
             <h3 className="font-display mt-1 text-lg font-bold">are told</h3>
             <p className="mt-2 text-sm text-ink-soft">
-              We tell you within{" "}
-              <Placeholder kind="WINDOW">telling you about access to your ID images</Placeholder>
-              . The only exception: if an active fraud investigation needs us
-              to wait.
+              We tell you within 72 hours. The only exception is an active
+              fraud investigation. Then a second person must agree to the
+              wait, and we still tell you at most 30 days later.
             </p>
           </div>
         </div>
@@ -414,6 +410,11 @@ export default function YourData() {
           delete your account and everything we don&rsquo;t have to keep by
           law. This is real deletion, not just hiding your account. It follows
           the same written steps every time, and every run is logged.
+        </p>
+        <p className="mt-4 max-w-2xl text-ink-soft">
+          If you don&rsquo;t sign in for 5 years, we delete your account with
+          the same steps. We email you 60 days and 7 days before. Any sign-in
+          resets the clock.
         </p>
 
         <DeletionPipeline />
@@ -484,15 +485,15 @@ export default function YourData() {
           items={[
             "The Knot holds only two things: a yes/no flag for whether you are blocked from our programs, and which program grants you got.",
             <>
-              The grant list is how we keep grant limits fair, like one grant
-              per person for a program. The exact limits are{" "}
-              <Placeholder kind="DECISION">grant limits per program</Placeholder>
-              .
+              The grant list is how we keep grant limits fair: one grant per
+              person per program, for life. In a rare case, the program lead
+              can approve one more, with sign-off from a board member and a
+              written reason.
             </>,
             "It holds no name, no reason, and no history. Reasons live in the ID check records, and those are destroyed when their time is up.",
             "If you come back in good standing, you simply verify again like anyone else. You start fresh.",
             "A name and birthday match can only bring in a second person to take a closer look. It can never deny you on its own. A birthday can call a human, but it can’t decide anything.",
-            "Honest note: a fingerprint can’t be reversed. But someone with access to our systems who already knew your details could make the same fingerprint and compare. That is why we protect the Knot as carefully as everything else.",
+            "Honest note: a fingerprint can’t be reversed. We make the fingerprints with a secret key that we keep apart from the database. But someone who had that key and already knew your details could make the same fingerprint and compare. That is why we protect the Knot as carefully as everything else.",
           ]}
         />
       </section>
