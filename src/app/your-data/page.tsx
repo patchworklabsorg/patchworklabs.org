@@ -363,16 +363,18 @@ export default function YourData() {
           pass,{" "}
           <Placeholder kind="DECISION">ID images when a check does not pass</Placeholder>
           . Until then, they are locked away. The one person who checks your ID
-          before the call looks at it, and every look is logged. Any other
-          access needs two of our three key holders to agree.
+          before the call can see it only until that check ends, and every
+          look is logged. Then we seal it, and only two of our three key
+          holders together can open it.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           <div className="patch bg-grape-soft p-5 patch-tilt-l">
             <p className="font-display text-3xl font-bold text-grape">2 of 3</p>
             <h3 className="font-display mt-1 text-lg font-bold">key holders</h3>
             <p className="mt-2 text-sm text-ink-soft">
-              Three named people hold hardware keys, and any two of them must
-              agree to open a stored ID image. Nobody can open one alone. There is no folder of IDs to browse.
+              Three named people hold hardware keys. After the check before the
+              call, a sealed ID image opens only when two of them use their keys
+              together. Nobody can open one alone. There is no folder of IDs to browse.
             </p>
           </div>
           <div className="patch bg-teal-soft p-5">
