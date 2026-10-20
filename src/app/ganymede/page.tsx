@@ -270,10 +270,11 @@ export default function Ganymede() {
         <div className="mt-6 max-w-2xl space-y-2 text-ink-soft">
           <p>
             <span className="font-semibold text-ink">Great pitches:</span>{" "}
-            training an RL model for a combat robot, optimizing an LLM for a
-            specific application or tiny hardware, a model that learns your
-            school&rsquo;s slang from anonymized group chats, or reproducing a
-            published paper&rsquo;s results to see if they actually hold up.
+            training an RL model for a competition robot, optimizing an LLM
+            for a specific application or tiny hardware, a model that learns
+            your school&rsquo;s slang from anonymized group chats, or
+            reproducing a published paper&rsquo;s results to see if they
+            actually hold up.
           </p>
           <p>
             <span className="font-semibold text-ink">Not so much:</span>{" "}
