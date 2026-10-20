@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Patchwork Labs",
   },
   description:
-    "A community of makers from around the world, building everything from rocket engines to scam detection tools. Grants, compute, and people who help each other build.",
+    "A community of makers from around the world, building everything from machine learning research to scam detection tools. Grants, compute, and people who help each other build.",
   openGraph: {
     title: "Patchwork Labs",
     description:
