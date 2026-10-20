@@ -14,7 +14,7 @@ export default function Home() {
       <section className="flex flex-col-reverse items-start gap-10 py-16 sm:flex-row sm:items-center sm:py-24">
         <div>
           <p className="font-display text-lg text-grape">
-            rocket engines · scam detection · robotics · security ·{" "}
+            machine learning · scam detection · robotics · security ·{" "}
             <em>insert your project here</em>
           </p>
           <h1 className="font-display mt-4 text-4xl font-bold leading-tight sm:text-6xl">
