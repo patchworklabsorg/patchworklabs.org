@@ -73,6 +73,11 @@ const collected = [
     className: "bg-teal-soft patch-tilt-r",
   },
   {
+    title: "US residency",
+    body: "Whether you live in the US, the US state, the type of document that showed it, and the date. Some compute partners are open only to people who live in the US. We never ask about citizenship. If your ID does not show a US address, you can send a school enrollment record or a parent's or guardian's ID and address. That document follows the same rules as your ID images. The result is good for 12 months, or until you move to another state or country.",
+    className: "bg-teal-soft patch-tilt-l",
+  },
+  {
     title: "Demographic answers",
     body: "Things like your age range and gender, which you tell us yourself. Funders ask us for totals, so we ask you. Only the totals ever leave the vault.",
     className: "bg-sky-soft patch-tilt-l",
@@ -371,7 +376,8 @@ export default function YourData() {
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           We delete your ID images 7 days after you pass. If you don&rsquo;t
           pass, or we ask you for a new photo, we delete them 30 days after
-          that check ends. Until then, they are locked away. The one person who checks your ID
+          that check ends. A document that shows where you live (for the US
+          residency check) follows the same rules. Until then, they are locked away. The one person who checks your ID
           before the call can see it only until that check ends, and every
           look is logged. Then we seal it, and only two of our three key
           holders together can open it.
