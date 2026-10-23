@@ -76,7 +76,7 @@ export default function Privacy() {
           and you can email us any time to see or delete what we have. Here is
           the longer version, in plain English.
         </p>
-        <p className="mt-4 text-sm text-ink-soft">Last updated October 12, 2026.</p>
+        <p className="mt-4 text-sm text-ink-soft">Last updated October 23, 2026.</p>
         <Link
           href={DATA_PAGE_PATH}
           className="patch group mt-8 block max-w-2xl bg-teal-soft p-6 transition-transform hover:-translate-y-0.5"

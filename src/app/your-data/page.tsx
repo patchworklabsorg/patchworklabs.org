@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Link } from "next-view-transitions";
 import DeletionPipeline from "@/components/your-data/deletion-pipeline";
 import KnotDiagram from "@/components/your-data/knot-diagram";
-import Placeholder from "@/components/your-data/placeholder";
 import RetentionTable from "@/components/your-data/retention-table";
 import RetentionTimeline from "@/components/your-data/retention-timeline";
 import VerificationFlow from "@/components/your-data/verification-flow";
@@ -14,8 +13,8 @@ import {
 } from "@/lib/site";
 
 // Public, plain-English version of how Weave handles ID checks and personal
-// data. Undecided numbers use <Placeholder>, which blocks a production
-// deploy until each one is replaced with the decided value.
+// data. Use <Placeholder> (components/your-data/placeholder) for a number
+// that is not decided yet: it blocks a production deploy until it is replaced.
 
 const description =
   "How we check IDs for program resources, what we collect and why, and what happens to your data when you delete your account. Written for members and their parents or guardians.";
@@ -142,7 +141,7 @@ export default function YourData() {
           covers everything else we collect.
         </p>
         <p className="mt-4 text-sm text-ink-soft">
-          Last updated <Placeholder kind="DATE">rollout day</Placeholder>.
+          Last updated October 23, 2026.
         </p>
 
         <nav
