@@ -3,6 +3,8 @@
 // redirects to the onboarding page, which walks people through each step.
 export const SLACK_URL = "https://slack.patchworklabs.org";
 export const CONTACT_EMAIL = "team@patchworklabs.org";
+// Questions about personal data, takeout and deletion (the data page and the privacy policy).
+export const PRIVACY_EMAIL = "privacy@patchworklabs.org";
 // Financial contributions and project collaborations go straight to Jasper.
 export const DONATE_EMAIL = "jasper@patchworklabs.org";
 // Project Ganymede inbox: project pitches and resource donations.

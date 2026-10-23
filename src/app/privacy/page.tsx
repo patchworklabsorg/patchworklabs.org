@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Link } from "next-view-transitions";
-import { CONTACT_EMAIL, DATA_PAGE_PATH } from "@/lib/site";
+import { PRIVACY_EMAIL, DATA_PAGE_PATH } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -175,10 +175,10 @@ export default function Privacy() {
             Want to see what we have about you, fix something, or have it
             deleted? Email{" "}
             <a
-              href={`mailto:${CONTACT_EMAIL}`}
+              href={`mailto:${PRIVACY_EMAIL}`}
               className="font-medium text-grape hover:underline"
             >
-              {CONTACT_EMAIL}
+              {PRIVACY_EMAIL}
             </a>{" "}
             and we&rsquo;ll take care of it. We&rsquo;re a small team of
             volunteers, but we answer.

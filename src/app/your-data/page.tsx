@@ -6,7 +6,7 @@ import RetentionTable from "@/components/your-data/retention-table";
 import RetentionTimeline from "@/components/your-data/retention-timeline";
 import VerificationFlow from "@/components/your-data/verification-flow";
 import {
-  CONTACT_EMAIL,
+  PRIVACY_EMAIL,
   DATA_PAGE_PATH,
   SITE_URL,
   SLACK_URL,
@@ -312,10 +312,10 @@ export default function YourData() {
             <>
               Parents and guardians can email{" "}
               <a
-                href={`mailto:${CONTACT_EMAIL}`}
+                href={`mailto:${PRIVACY_EMAIL}`}
                 className="font-medium text-grape hover:underline"
               >
-                {CONTACT_EMAIL}
+                {PRIVACY_EMAIL}
               </a>{" "}
               any time to ask what we have, or to ask us to delete it.
             </>,
@@ -533,10 +533,10 @@ export default function YourData() {
           <p className="text-ink-soft">
             Something here unclear, or something you want to check? Email{" "}
             <a
-              href={`mailto:${CONTACT_EMAIL}`}
+              href={`mailto:${PRIVACY_EMAIL}`}
               className="font-medium text-grape hover:underline"
             >
-              {CONTACT_EMAIL}
+              {PRIVACY_EMAIL}
             </a>
             . Parents and guardians are welcome to ask too. If we change how
             we handle your data, we update this page and the date at the top,
