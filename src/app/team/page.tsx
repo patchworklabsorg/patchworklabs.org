@@ -26,6 +26,7 @@ const team: TeamMember[] = [
     name: "Jasper Mayone",
     pronouns: "he/they",
     role: "Founder & Director of Programs",
+    email: "jasper@patchworklabs.org",
     patchColor: "bg-grape-soft",
     photo: "/team/jasper-card.jpg",
     bio: [
@@ -39,6 +40,7 @@ const team: TeamMember[] = [
     name: "Kieran Klukas",
     pronouns: "he/him",
     role: "Board Secretary/Treasurer",
+    email: "kieran@patchworklabs.org",
     patchColor: "bg-teal-soft",
     photo: "/team/kieran-v2.png",
     bio: [
@@ -50,6 +52,7 @@ const team: TeamMember[] = [
     name: "Dominic Petrarca",
     pronouns: "he/him",
     role: "Board Member",
+    email: "dominic@patchworklabs.org",
     patchColor: "bg-violet-soft",
     photo: "/team/dominic-headshot.jpg",
     bio: [
