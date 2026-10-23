@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
 
-// "What delete actually deletes": nine kinds of data, and what happens to
-// each one when you delete your account. Rows stack into cards on phones.
+// "What delete actually deletes": every kind of data, whether it is in your
+// download, and what happens to it when you delete your account. Rows stack
+// into cards on phones. The download column follows Weave's Takeout
+// (docs/KYC.md, "Takeout").
 
 type Outcome = "gone" | "deleted" | "counted" | "kept";
 
@@ -16,10 +18,12 @@ const rows: {
   what: string;
   outcome: Outcome;
   label: string;
+  download: boolean;
   why: ReactNode;
 }[] = [
   {
     what: "Your ID images",
+    download: false,
     outcome: "gone",
     label: "already gone",
     why: (
@@ -32,24 +36,35 @@ const rows: {
   },
   {
     what: "Your account and profile",
+    download: true,
     outcome: "deleted",
     label: "deleted",
     why: "Nothing makes us keep it.",
   },
   {
+    what: "Your Thread Count",
+    download: false,
+    outcome: "deleted",
+    label: "deleted",
+    why: "An internal trust score that our staff read. It is not in your download. We delete it with your account.",
+  },
+  {
     what: "Your parent or guardian’s contact details",
+    download: true,
     outcome: "deleted",
     label: "deleted",
     why: "We only need them while a member under 18 takes part.",
   },
   {
     what: "Your demographic answers",
+    download: false,
     outcome: "counted",
     label: "added to totals, then deleted",
     why: "General ranges from your answers go into the totals. Then the encrypted record is destroyed.",
   },
   {
     what: "Your ID check records",
+    download: true,
     outcome: "kept",
     label: "kept for a set time",
     why: (
@@ -61,7 +76,22 @@ const rows: {
     ),
   },
   {
+    what: "Your US residency check",
+    download: false,
+    outcome: "kept",
+    label: "kept, with no link to you",
+    why: (
+      <>
+        The yes or no result, the US state, and the type of document. We keep
+        it like your ID check records, with no link to you. The document itself
+        follows the rules for ID images, and we delete it when you delete your
+        account.
+      </>
+    ),
+  },
+  {
     what: "Grant and money records",
+    download: true,
     outcome: "kept",
     label: "kept, then made anonymous",
     why: (
@@ -75,12 +105,14 @@ const rows: {
   },
   {
     what: "What you did in our programs",
+    download: true,
     outcome: "counted",
     label: "added to totals",
     why: "General facts go into the totals. Then the link to you is cut.",
   },
   {
     what: "Records a funder requires",
+    download: true,
     outcome: "kept",
     label: "kept, then added to totals",
     why: (
@@ -92,6 +124,7 @@ const rows: {
   },
   {
     what: "The Knot and its record",
+    download: false,
     outcome: "kept",
     label: "kept",
     why: (
@@ -117,6 +150,9 @@ export default function RetentionTable() {
               Kind of data
             </th>
             <th scope="col" className="px-3 py-2 font-medium">
+              In your download?
+            </th>
+            <th scope="col" className="px-3 py-2 font-medium">
               When you delete
             </th>
             <th scope="col" className="px-3 py-2 font-medium">
@@ -136,6 +172,10 @@ export default function RetentionTable() {
               >
                 {row.what}
               </th>
+              <td className="block pt-2 text-sm text-ink-soft sm:table-cell sm:px-3 sm:py-3 sm:align-top sm:text-base sm:text-ink">
+                <span className="sm:hidden">In your download: </span>
+                {row.download ? "Yes" : "No"}
+              </td>
               <td className="block pt-2 sm:table-cell sm:px-3 sm:py-3 sm:align-top">
                 <span
                   className={`inline-block rounded-lg border px-2.5 py-0.5 text-sm font-semibold text-ink ${

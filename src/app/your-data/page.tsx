@@ -68,17 +68,17 @@ const collected = [
   },
   {
     title: "The call record",
-    body: "Who was on your video call, when it happened, which ID we looked at, the result, and the reason. The person who did the call writes this down. There is no video or audio.",
+    body: "Who was on your video call, when it happened, the type of ID we looked at, the result, and the reason. The person who did the call writes this down. There is no video or audio.",
     className: "bg-teal-soft patch-tilt-r",
   },
   {
     title: "US residency",
-    body: "Whether you live in the US, the US state, the type of document that showed it, and the date. Some compute partners are open only to people who live in the US. We never ask about citizenship. If your ID does not show a US address, you can send a school enrollment record or a parent's or guardian's ID and address. That document follows the same rules as your ID images. The result is good for 12 months, or until you move to another state or country.",
+    body: "Whether you live in the US, the US state, the type of document that showed it, and the date. Some compute partners are open only to people who live in the US. We never ask about citizenship. If your ID does not show a US address, you can send a school enrollment record or a parent's or guardian's ID and address. We delete that document on the same schedule as your ID images. After the check, nobody can open it. A yes result is good for 12 months, or until you move to another state or country.",
     className: "bg-teal-soft patch-tilt-l",
   },
   {
     title: "Demographic answers",
-    body: "Things like your age range and gender, which you tell us yourself. Funders ask us for totals, so we ask you. Only the totals ever leave the vault.",
+    body: "Your gender, which you tell us yourself, and an age range that comes from your birthday. Funders ask us for totals, so we ask you. Only the totals ever leave the vault.",
     className: "bg-sky-soft patch-tilt-l",
   },
   {
@@ -126,7 +126,7 @@ export default function YourData() {
           Before you get program resources, like compute or grant money, we
           check your ID on a live video call that is never recorded. We delete
           your ID images soon after you pass. Nobody here can read your
-          demographic answers. When you delete your account, your readable
+          demographic answers in Weave. When you delete your account, your readable
           data goes, and we tell you exactly what stays and why.
         </p>
         <p className="mt-4 max-w-2xl text-ink-soft">
@@ -254,7 +254,7 @@ export default function YourData() {
               It isn&rsquo;t the end. After a wait of 14 days, you can start
               again from step 1.
             </>,
-            "Your next try is always with a different person. No one person can fail you again and again, or pass you again and again.",
+            "Your next try is always with a different person. No one person can fail you again and again.",
             "If a second call does not pass, the verification team lead looks at the whole history together, so you are not stuck in a loop.",
             "Every try is written down and linked to the one before it, so if you disagree with a result, we can look at what really happened.",
           ]}
@@ -280,6 +280,8 @@ export default function YourData() {
           This is the data that the ID check and our programs add to your account. Every piece
           has an answer to three questions: can you download it, can you
           delete it, and if not, which rule makes us keep it and for how long.
+          The table under &ldquo;What delete actually deletes&rdquo; gives
+          each answer.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           {collected.map((c) => (
@@ -337,23 +339,23 @@ export default function YourData() {
               Your answers come from you
             </h3>
             <p className="mt-2 text-ink-soft">
-              No ID ever changes what you tell us
-              about yourself. On the call, we only check that the age and
-              region you gave don&rsquo;t clash with your ID. We write down
-              &ldquo;yes&rdquo; or &ldquo;no&rdquo;, and we never copy anything
-              from your ID into your answers. We never check gender against an
-              ID. You know who you are.
+              On the call, we check that your legal name and birthday match
+              your ID, and that the region you gave doesn&rsquo;t clash with
+              it. Your age range comes from your birthday. We never copy
+              anything from your ID into your answers, and we never check
+              gender against an ID. You know who you are.
             </p>
           </div>
           <div className="patch bg-violet-soft p-6 patch-tilt-r">
             <h3 className="font-display text-xl font-bold">
-              Nobody can read your answers
+              Nobody can read them in Weave
             </h3>
             <p className="mt-2 text-ink-soft">
-              Your answers are locked in an encrypted vault. No screen shows
-              them, and no export includes them. Nobody at Patchwork Labs can
-              read one person&rsquo;s answers. Not our staff, not our admins,
-              not anyone.
+              Your answers are locked in an encrypted vault. Nobody can read
+              them in Weave. No screen, export, or admin page shows them. The
+              only key that opens the vault is kept offline by a few key
+              holders. They use it only for the run that counts the totals,
+              and every run is logged.
             </p>
           </div>
         </div>
@@ -364,7 +366,7 @@ export default function YourData() {
               If a group is very small, we hide it, so nobody can work out who
               is in it. A group needs at least 10 people before we show it.
             </>,
-            "When you delete your account, your answers are added to the totals as general ranges, and your encrypted record is destroyed. Until our next report run, those ranges wait in sealed form with no link to you.",
+            "When you delete your account, your sealed answers are cut off from your account. They wait, with no link to you, until our next report run. That run adds them to the totals as general ranges and then deletes them.",
           ]}
         />
       </section>
@@ -375,16 +377,20 @@ export default function YourData() {
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           We delete your ID images 7 days after you pass. If you don&rsquo;t
           pass, or we ask you for a new photo, we delete them 30 days after
-          that check ends. A document that shows where you live (for the US
-          residency check) follows the same rules. Until then, they are locked away. The one person who checks your ID
-          before the call can see it only until that check ends, and every
-          look is logged. Then we seal it, and only two of our three key
-          holders together can open it.
+          that check ends. If our verification team lead reviews your check,
+          the check ends when the review ends. If you stop before the call,
+          write to us and we delete your image. Until then, your images are
+          locked away. The one person who checks your ID before the call can
+          see it only until that check ends, and every look is logged. Then
+          we seal it, and only two of our three key holders together can
+          open it.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           <div className="patch bg-grape-soft p-5 patch-tilt-l">
-            <p className="font-display text-3xl font-bold text-grape">2 of 3</p>
-            <h3 className="font-display mt-1 text-lg font-bold">key holders</h3>
+            <h3 className="font-display text-lg font-bold">
+              <span className="block text-3xl text-grape">2 of 3</span>
+              <span className="mt-1 block">key holders</span>
+            </h3>
             <p className="mt-2 text-sm text-ink-soft">
               Three named people hold hardware keys. After the check before the
               call, a sealed ID image opens only when two of them use their keys
@@ -392,11 +398,9 @@ export default function YourData() {
             </p>
           </div>
           <div className="patch bg-teal-soft p-5">
-            <p className="font-display text-3xl font-bold text-teal">
-              Every
-            </p>
-            <h3 className="font-display mt-1 text-lg font-bold">
-              access is logged
+            <h3 className="font-display text-lg font-bold">
+              <span className="block text-3xl text-ink">Every</span>
+              <span className="mt-1 block">access is logged</span>
             </h3>
             <p className="mt-2 text-sm text-ink-soft">
               If anyone opens a stored image, the key holders who approved it
@@ -405,13 +409,15 @@ export default function YourData() {
             </p>
           </div>
           <div className="patch bg-orchid-soft p-5 patch-tilt-r">
-            <p className="font-display text-3xl font-bold text-orchid">You</p>
-            <h3 className="font-display mt-1 text-lg font-bold">are told</h3>
+            <h3 className="font-display text-lg font-bold">
+              <span className="block text-3xl text-orchid">You</span>
+              <span className="mt-1 block">are told</span>
+            </h3>
             <p className="mt-2 text-sm text-ink-soft">
-              We tell you within 72 hours. The only exception is an active
-              fraud investigation. Then an owner or our verification team lead
-              must agree to the wait (never the person who asked for it), and
-              we still tell you at most 30 days later.
+              We tell you 72 hours after the image is opened. The only
+              exception is an active fraud investigation. Then an owner or our
+              verification team lead must agree to the wait (never the person
+              who asked for it), and we still tell you at most 30 days later.
             </p>
           </div>
         </div>
@@ -424,9 +430,14 @@ export default function YourData() {
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           You can download a copy of your data from your account. You can also
-          delete your account and everything we don&rsquo;t have to keep by
-          law. This is real deletion, not just hiding your account. It follows
-          the same written steps every time, and every run is logged.
+          delete your account and everything that no law, funder contract, or
+          fraud rule makes us keep. This is real deletion, not just hiding your
+          account. It follows the same written steps every time, and every run
+          is logged.
+        </p>
+        <p className="mt-4 max-w-2xl text-ink-soft">
+          Deleting your Weave account does not delete your Slack account or
+          your messages. Ask us to remove those too.
         </p>
         <p className="mt-4 max-w-2xl text-ink-soft">
           If you don&rsquo;t sign in for 5 years, we delete your account with
@@ -461,9 +472,9 @@ export default function YourData() {
 
         <p className="mt-6 max-w-2xl text-ink-soft">
           About the totals: they are just counts, like &ldquo;12 members from
-          Europe got a grant in 2026&rdquo;. They have no names and no rows
-          for single people, so nothing in them can be traced back to you.
-          Small groups stay hidden here too.
+          Canada got a grant in 2026&rdquo;. They have no names and no rows
+          for single people. We hide small groups here too, so it is very hard
+          to trace a total back to one person.
         </p>
 
         <RetentionTimeline />
@@ -500,7 +511,7 @@ export default function YourData() {
         </h3>
         <Bullets
           items={[
-            "The Knot holds only two things: a yes/no flag for whether you are blocked from our programs, and which program grants you got.",
+            "Besides the fingerprints, the Knot holds only two things: a yes/no flag for whether you are blocked from our programs, and which program grants you got.",
             <>
               The grant list is how we keep grant limits fair: one grant per
               person per program, for life. In a rare case, the program lead
