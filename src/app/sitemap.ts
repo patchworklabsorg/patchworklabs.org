@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "@/lib/site";
+import { DATA_PAGE_PATH, SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -27,6 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/privacy`,
       changeFrequency: "yearly",
       priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}${DATA_PAGE_PATH}`,
+      changeFrequency: "yearly",
+      priority: 0.4,
     },
     {
       url: `${SITE_URL}/imprint`,

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { Link } from "next-view-transitions";
+import { PRIVACY_EMAIL, DATA_PAGE_PATH } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -26,7 +27,21 @@ const collected = [
   },
   {
     title: "Project Ganymede",
-    body: "To give you access to compute we ask for your name, email, and what you're building. Shared infrastructure keeps usage logs so we can keep it healthy and fairly shared.",
+    body: (
+      <>
+        To give you access to compute we ask for your name, email, and what
+        you&rsquo;re building. Shared infrastructure keeps usage logs so we
+        can keep it healthy and fairly shared. Program resources also need an
+        ID check. Read{" "}
+        <Link
+          href={DATA_PAGE_PATH}
+          className="font-medium text-grape hover:underline"
+        >
+          what we do with your data
+        </Link>{" "}
+        to see how the check works and what we keep.
+      </>
+    ),
     className: "bg-sky-soft patch-tilt-r",
   },
   {
@@ -44,7 +59,7 @@ const promises = [
 ];
 
 const guardianRetention = [
-  "We keep a consent while the member has an account, and for 1 year after the account is deleted. Then we delete it.",
+  "We keep a consent and the parent or guardian's contact details while the member is under 18 and has an account. When the member turns 18 or deletes their account, we delete them.",
   "If a parent or guardian does not answer, we delete their name and email address 30 days after the link expires.",
   "A parent or guardian can take their consent back at any time from the link in their email.",
 ];
@@ -61,7 +76,23 @@ export default function Privacy() {
           and you can email us any time to see or delete what we have. Here is
           the longer version, in plain English.
         </p>
-        <p className="mt-4 text-sm text-ink-soft">Last updated October 12, 2026.</p>
+        <p className="mt-4 text-sm text-ink-soft">Last updated October 23, 2026.</p>
+        <Link
+          href={DATA_PAGE_PATH}
+          className="patch group mt-8 block max-w-2xl bg-teal-soft p-6 transition-transform hover:-translate-y-0.5"
+        >
+          <p className="font-display text-xl font-bold">
+            What we do with your data{" "}
+            <span aria-hidden className="text-teal">
+              →
+            </span>
+          </p>
+          <p className="mt-2 text-ink-soft">
+            The plain-English guide to ID checks, the video call (never
+            recorded), your demographic answers, deleting your account, and
+            the one thing we keep after you leave.
+          </p>
+        </Link>
       </section>
 
       {/* This website */}
@@ -144,10 +175,10 @@ export default function Privacy() {
             Want to see what we have about you, fix something, or have it
             deleted? Email{" "}
             <a
-              href={`mailto:${CONTACT_EMAIL}`}
+              href={`mailto:${PRIVACY_EMAIL}`}
               className="font-medium text-grape hover:underline"
             >
-              {CONTACT_EMAIL}
+              {PRIVACY_EMAIL}
             </a>{" "}
             and we&rsquo;ll take care of it. We&rsquo;re a small team of
             volunteers, but we answer.
