@@ -125,7 +125,8 @@ export default function YourData() {
           The short version: anyone can join the community without an ID.
           Before you get program resources, like compute or grant money, we
           check your ID on a live video call that is never recorded. We delete
-          your ID images soon after you pass. Nobody here can read your
+          your ID images 7 days after you pass, or 30 days after you
+          don&rsquo;t. Nobody here can read your
           demographic answers in Weave. When you delete your account, your readable
           data goes, and we tell you exactly what stays and why.
         </p>
@@ -375,15 +376,40 @@ export default function YourData() {
       <section id="id-images" className="scroll-mt-6 py-8">
         <h2 className="font-display text-3xl font-bold">Your ID images</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          We delete your ID images 7 days after you pass. If you don&rsquo;t
-          pass, or we ask you for a new photo, we delete them 30 days after
-          that check ends. If our verification team lead reviews your check,
-          the check ends when the review ends. If you stop before the call,
-          write to us and we delete your image. Until then, your images are
-          locked away. The one person who checks your ID before the call can
-          see it only until that check ends, and every look is logged. Then
-          we seal it, and only two of our three key holders together can
-          open it.
+          Your ID images are encrypted from the moment they arrive until we
+          delete them. Sealing is how we lock them until then. It is not a way
+          to keep them longer. Here is what happens, in order:
+        </p>
+        <ol className="mt-6 max-w-2xl space-y-4 text-ink-soft">
+          <li>
+            <span className="font-semibold text-ink">1. You send them.</span>{" "}
+            We encrypt them as soon as they arrive.
+          </li>
+          <li>
+            <span className="font-semibold text-ink">2. We check them.</span>{" "}
+            One person on our verification team at a time checks your ID
+            before the call. If they hand the check to a teammate, that is
+            logged. Each of them can see the images only until that check
+            ends, and every look is logged.
+          </li>
+          <li>
+            <span className="font-semibold text-ink">3. We seal them.</span>{" "}
+            When that check ends, we seal the images. From then on, a team
+            member can see them only with a written reason and the approval
+            of two of our three key holders.
+          </li>
+          <li>
+            <span className="font-semibold text-ink">4. We delete them.</span>{" "}
+            We delete them 7 days after you pass. If you don&rsquo;t pass, or
+            we ask you for a new photo, we delete them 30 days after that
+            result. If our verification team lead reviews your check, we
+            wait until the review ends. If the 30 days are already over by
+            then, we delete them at once.
+          </li>
+        </ol>
+        <p className="mt-4 max-w-2xl text-ink-soft">
+          If you stop before the call, we keep your images locked until you
+          write to us or delete your account. Then we delete them.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           <div className="patch bg-grape-soft p-5 patch-tilt-l">
@@ -393,8 +419,10 @@ export default function YourData() {
             </h3>
             <p className="mt-2 text-sm text-ink-soft">
               Three named people hold hardware keys. After the check before the
-              call, a sealed ID image opens only when two of them use their keys
-              together. Nobody can open one alone. There is no folder of IDs to browse.
+              call, a sealed ID image opens only when two of them approve with
+              their keys. Then only the team member who asked, with a written
+              reason, sees it, one time. Nobody can open one alone. There is
+              no folder of IDs to browse.
             </p>
           </div>
           <div className="patch bg-teal-soft p-5">

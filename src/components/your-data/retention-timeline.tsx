@@ -9,7 +9,7 @@ const rows = [
     label: "Your ID images",
     end: 7,
     bar: "bg-orchid",
-    note: "deleted soon after you pass",
+    note: "sealed, then deleted 7 days after you pass",
   },
   {
     label: "Guardian contact",
