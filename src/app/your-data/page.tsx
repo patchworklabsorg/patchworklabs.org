@@ -63,7 +63,7 @@ const sections = [
 const collected = [
   {
     title: "Your ID",
-    body: "A photo or scan of an ID, like a passport or ID card. We use it to check that you are a real person, and to confirm your age and where you live. We use it for the ID check and nothing else.",
+    body: "A photo or scan of a government ID: a passport, a national ID card, a driving licence or a residence permit. We use it to check that you are a real person, and to confirm your age and where you live. We use it for the ID check and nothing else.",
     className: "bg-grape-soft patch-tilt-l",
   },
   {
@@ -528,7 +528,8 @@ export default function YourData() {
         <Bullets
           items={[
             "At your ID check, we turn a few details from your ID into fingerprints with a one-way function. We can check if a new fingerprint matches an old one. We can’t turn a fingerprint back into your name or ID number.",
-            "Some fingerprints are strong: they come from an ID number, so a match means the same person. One is soft: it comes from your legal name and birthday, which two different people can share.",
+            "Some fingerprints are strong: they come from an ID number, so a match means the same person. Some are medium: they come from your legal name, birthday and country of birth together, which two people almost never share. Some are soft: they come from your legal name and birthday, which two different people can share.",
+            "We make the name fingerprints from your full name and from each pair of your names, so a middle name that is on one ID and not on another doesn’t hide a match.",
             "If you verify again with a new ID while your account is open, the new fingerprint joins your set.",
             "If your legal name changes, you show us the new document. Two of our team sign off, the new fingerprints join your set, and you keep your standing.",
           ]}
@@ -541,14 +542,16 @@ export default function YourData() {
           items={[
             "Besides the fingerprints, the Knot holds only two things: a yes/no flag for whether you are blocked from our programs, and which program grants you got.",
             <>
-              The grant list is how we keep grant limits fair: one grant per
-              person per program, for life. In a rare case, the program lead
-              can approve one more, with sign-off from a board member and a
+              The grant list is how we keep grant limits fair. Each program
+              sets its own limit on grants per person, and some programs have
+              no limit. Where there is a limit, the program lead can approve
+              one more in a rare case, with sign-off from a board member and a
               written reason.
             </>,
             "It holds no name, no reason, and no history. Reasons live in the ID check records, and those are destroyed when their time is up.",
-            "If you come back in good standing, you simply verify again like anyone else. You start fresh.",
-            "A name and birthday match can only bring in a second person to take a closer look. It can never deny you on its own. A birthday can call a human, but it can’t decide anything.",
+            "If you come back in good standing, you simply verify again like anyone else. You start fresh, but the grants you already got still count toward each program’s limit.",
+            "A name, birthday and country of birth match counts as the same person, and a second person joins your call. If the two of them are sure that you are a different person, they write down why, and nothing is linked.",
+            "A name and birthday match on its own can only bring in a second person to take a closer look. It can never deny you on its own. A birthday can call a human, but it can’t decide anything.",
             "Honest note: a fingerprint can’t be reversed. We make the fingerprints with a secret key that we keep apart from the database. But someone who had that key and already knew your details could make the same fingerprint and compare. That is why we protect the Knot as carefully as everything else.",
           ]}
         />
