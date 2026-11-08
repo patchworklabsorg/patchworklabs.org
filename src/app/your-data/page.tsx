@@ -93,7 +93,7 @@ const collected = [
   },
   {
     title: "The Knot",
-    body: "A one-way fingerprint made at your ID check. It stops one person from getting the same grant twice under a new name. More about it below.",
+    body: "A one-way fingerprint made at your ID check. It stops one person from getting around a block, or a program’s limit on grants per person, under a new name. More about it below.",
     className: "bg-grape-soft patch-tilt-r",
   },
 ];
@@ -142,7 +142,7 @@ export default function YourData() {
           covers everything else we collect.
         </p>
         <p className="mt-4 text-sm text-ink-soft">
-          Last updated October 23, 2026.
+          Last updated November 8, 2026.
         </p>
 
         <nav
@@ -195,7 +195,8 @@ export default function YourData() {
               Compute, server access, and grant money are real resources. So
               before you get them, we check that you are a real person, how old
               you are, and where you live. Some of this is the law. Some of it
-              stops one person from collecting the same grant twice.
+              stops one person from getting around a block, or a program&rsquo;s
+              limit on grants per person.
             </p>
           </div>
         </div>
@@ -516,8 +517,9 @@ export default function YourData() {
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">
           When you cut a thread, the knot stays tied. We want deleting your
           account to be real. We also need to stop someone from deleting
-          everything, coming back as a &ldquo;new&rdquo; person, and getting
-          the same grant again. The Knot lets us do both.
+          everything and coming back as a &ldquo;new&rdquo; person to get
+          around a block, or a program&rsquo;s limit on grants per person.
+          The Knot lets us do both.
         </p>
 
         <KnotDiagram />
@@ -528,7 +530,7 @@ export default function YourData() {
         <Bullets
           items={[
             "At your ID check, we turn a few details from your ID into fingerprints with a one-way function. We can check if a new fingerprint matches an old one. We can’t turn a fingerprint back into your name or ID number.",
-            "Some fingerprints are strong: they come from an ID number, so a match means the same person. Some are medium: they come from your legal name, birthday and country of birth together, which two people almost never share. Some are soft: they come from your legal name and birthday, which two different people can share.",
+            "Some fingerprints are strong: they come from an ID number, so a match means the same person. Some are medium: if your ID shows where you were born, they come from your legal name, birthday and country of birth together, which two people almost never share. Some are soft: they come from your legal name and birthday, which two different people can share.",
             "We also make name fingerprints from parts of your full name, so a middle name that is on one ID and not on another doesn’t hide a match.",
             "If you verify again with a new ID while your account is open, the new fingerprint joins your set.",
             "If your legal name changes, you show us the new document. Two of our team sign off, the new fingerprints join your set, and you keep your standing.",
@@ -550,8 +552,8 @@ export default function YourData() {
             </>,
             "It holds no name, no reason, and no history. Reasons live in the ID check records, and those are destroyed when their time is up.",
             "If you come back in good standing, you simply verify again like anyone else. You start fresh, but the grants you already got still count toward each program’s limit.",
-            "A name, birthday and country of birth match counts as the same person, and a second person joins your call. If the two of them are sure that you are a different person, they write down why, and nothing is linked.",
-            "A name and birthday match on its own can only bring in a second person to take a closer look. It can never deny you on its own. A birthday can call a human, but it can’t decide anything.",
+            "A name, birthday and country of birth match counts as the same person, and a second person joins your call. The grants and the block flag carry over, as with a strong match. If the two of them are sure that you are a different person, they write down why, and nothing is linked.",
+            "A name and birthday match on its own can only bring in a second person to take a closer look. It can never deny you on its own. A name and birthday alone can call a human, but they can’t decide anything.",
             "Honest note: a fingerprint can’t be reversed. We make the fingerprints with a secret key that we keep apart from the database. But someone who had that key and already knew your details could make the same fingerprint and compare. That is why we protect the Knot as carefully as everything else.",
           ]}
         />

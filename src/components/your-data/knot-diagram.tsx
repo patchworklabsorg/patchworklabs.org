@@ -1,5 +1,5 @@
 // The Knot: what goes into the one-way fingerprint, what we keep after you
-// delete your account, and the only two things a match can do.
+// delete your account, and the three things a match can do.
 
 function KnotGlyph({ className = "" }: { className?: string }) {
   return (
@@ -30,7 +30,7 @@ const inputs = [
     tag: "strong",
   },
   {
-    text: "Your legal name, birthday and country of birth",
+    text: "Your legal name, birthday and country of birth, if your ID shows where you were born",
     tag: "medium",
   },
   {
@@ -106,7 +106,7 @@ export default function KnotDiagram() {
         <p className="font-display text-lg font-bold">
           If someone comes back and verifies again
         </p>
-        <div className="mt-3 grid gap-4 sm:grid-cols-3">
+        <div className="mt-3 grid gap-4 lg:grid-cols-3">
           <div className="patch bg-grape-soft p-5">
             <p className="font-display font-bold">A strong match</p>
             <p className="mt-1 text-sm text-ink-soft">
@@ -122,7 +122,8 @@ export default function KnotDiagram() {
             </p>
             <p className="mt-1 text-sm text-ink-soft">
               Two people almost never share all three, so we count it as the
-              same person, and a second person joins your call. If the two of
+              same person, and a second person joins your call. Grants and the
+              block flag carry over, as with a strong match. If the two of
               them are sure you are a different person, they write down why,
               and nothing is linked.
             </p>

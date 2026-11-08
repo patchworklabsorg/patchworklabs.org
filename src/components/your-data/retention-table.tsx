@@ -130,7 +130,7 @@ const rows: {
     why: (
       <>
         A one-way fingerprint, a yes/no flag, and the grants you got. It does
-        not hold your name. Kept for ever, with no end date: the one-grant-per-program limit and the block
+        not hold your name. Kept for ever, with no end date: the per-program grant limits and the block
         flag both depend on it, and a block flag never fades.
       </>
     ),
