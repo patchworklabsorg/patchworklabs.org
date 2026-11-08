@@ -529,7 +529,7 @@ export default function YourData() {
           items={[
             "At your ID check, we turn a few details from your ID into fingerprints with a one-way function. We can check if a new fingerprint matches an old one. We can’t turn a fingerprint back into your name or ID number.",
             "Some fingerprints are strong: they come from an ID number, so a match means the same person. Some are medium: they come from your legal name, birthday and country of birth together, which two people almost never share. Some are soft: they come from your legal name and birthday, which two different people can share.",
-            "We make the name fingerprints from your full name and from each pair of your names, so a middle name that is on one ID and not on another doesn’t hide a match.",
+            "We also make name fingerprints from parts of your full name, so a middle name that is on one ID and not on another doesn’t hide a match.",
             "If you verify again with a new ID while your account is open, the new fingerprint joins your set.",
             "If your legal name changes, you show us the new document. Two of our team sign off, the new fingerprints join your set, and you keep your standing.",
           ]}
