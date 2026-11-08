@@ -1,5 +1,5 @@
 // The Knot: what goes into the one-way fingerprint, what we keep after you
-// delete your account, and the only two things a match can do.
+// delete your account, and the three things a match can do.
 
 function KnotGlyph({ className = "" }: { className?: string }) {
   return (
@@ -22,12 +22,16 @@ function KnotGlyph({ className = "" }: { className?: string }) {
 
 const inputs = [
   {
-    text: "The number and type of the ID you show us",
+    text: "The number and type of the ID you show us (for a US driving licence, also its state)",
     tag: "strong",
   },
   {
     text: "Your national ID number, if your country gives you one for life",
     tag: "strong",
+  },
+  {
+    text: "Your legal name, birthday and country of birth, if your ID shows where you were born",
+    tag: "medium",
   },
   {
     text: "Your legal name and birthday",
@@ -50,7 +54,9 @@ export default function KnotDiagram() {
                   className={`mt-0.5 shrink-0 rounded-full px-2 py-0.5 text-xs font-semibold ${
                     input.tag === "strong"
                       ? "bg-grape text-paper"
-                      : "border border-dashed border-grape text-grape"
+                      : input.tag === "medium"
+                        ? "border border-grape text-grape"
+                        : "border border-dashed border-grape text-grape"
                   }`}
                 >
                   {input.tag}
@@ -100,7 +106,7 @@ export default function KnotDiagram() {
         <p className="font-display text-lg font-bold">
           If someone comes back and verifies again
         </p>
-        <div className="mt-3 grid gap-4 sm:grid-cols-2">
+        <div className="mt-3 grid gap-4 lg:grid-cols-3">
           <div className="patch bg-grape-soft p-5">
             <p className="font-display font-bold">A strong match</p>
             <p className="mt-1 text-sm text-ink-soft">
@@ -108,6 +114,18 @@ export default function KnotDiagram() {
               still applies. If the flag is &ldquo;no&rdquo;, you just verify
               again like anyone else. If the flag is &ldquo;yes&rdquo;, the
               verification team looks more closely.
+            </p>
+          </div>
+          <div className="patch bg-violet-soft p-5">
+            <p className="font-display font-bold">
+              Name, birthday and country of birth match
+            </p>
+            <p className="mt-1 text-sm text-ink-soft">
+              Two people almost never share all three, so we count it as the
+              same person, and a second person joins your call. Grants and the
+              block flag carry over, as with a strong match. If the two of
+              them are sure you are a different person, they write down why,
+              and nothing is linked.
             </p>
           </div>
           <div className="patch bg-teal-soft p-5">
